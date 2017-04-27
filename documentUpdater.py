@@ -1,1 +1,1 @@
-import this
+from math import sin
