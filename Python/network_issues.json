@@ -1,0 +1,176 @@
+{
+    "T4": {
+        "1": {
+            "outcome": "RADIUS client will automatically mark a DEAD RADIUS server ALIVE the minute it is marked DEAD. Every authentication will have to timeout against the DEAD RADIUS server before failover will occur. This behaviour can cause excessive authentication wait time", 
+            "resolution": " Use the radius-server deadtime command in global configuration mode to cause the unavailable servers to be skipped immediately", 
+            "concern": "RADIUS deadtime is default of 0, which can cause excessive authentication wait time"
+        }, 
+        "2": {
+            "outcome": "The IP source routing options allows the sender of an IP packet to control the route that the datagram will take toward its ultimate destination, and generally the route that any reply will take. This feature is enabled by default with the command", 
+            "resolution": "Use the no ip source-route global configuration command ", 
+            "concern": "IP Source Routing is enabled, which is a deviation from the router security hardening best practices"
+        }, 
+        "3": {
+            "outcome": "Malicious user may attempt to interfere with the normal operations of the device by flooding it with connection requests", 
+            "resolution": "Implement login enhancements functionality such as delays between successive login attempts and login shutdown if DoS attacks are suspected http://www.cisco.com/c/en/us/td/docs/ios/sec_user_services/configuration/guide/15_0s/sec_securing_user_services_15_0S_book/sec_login_enhance.html?referring_site=cisco_cli_analyzer#wp1054098", 
+            "concern": "Missing Dictionary attack protection"
+        }, 
+        "4": {
+            "outcome": "Failure to secure the exchange of routing information allows an attacker to introduce false routing information into the network. By using password authentication with routing protocols between routers, you can aid the security of the network. However, because this authentication is sent as cleartext, it can be simple for an attacker to subvert this security control", 
+            "resolution": "configure key chain <key-name>\n key <key-identifier>\n key-string <password> \ninterface <interface>\n ip authentication mode eigrp <as-number> md5\n ip authentication key-chain eigrp <as-number> <key-name>", 
+            "concern": "Missing EIGRP Authentication"
+        }, 
+        "5": {
+            "outcome": "The Network Time Protocol (NTP) is not an especially dangerous service, but any unneeded service can represent an attack vector. If NTP is used, it is important to explicitly configure a trusted time source and to use proper authentication. Accurate and reliable time is required for syslog purposes, such as during forensic investigations of potential attacks, as well as for successful VPN connectivity when depending on certificates for Phase 1 authentication.", 
+            "resolution": "Configure NTP authentication,http://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html?referring_site=cisco_cli_analyzer#anc27", 
+            "concern": "Missing NTP Authentication"
+        }, 
+        "6": {
+            "outcome": "Unable to mitigate low-memory conditions on a dev", 
+            "resolution": "Configure                                                                                memory free low-watermark processor <threshold>\nmemory free low-watermark io <threshold>", 
+            "concern": "Missing configuration to ensures management processes continue to function if memory is exhausted"
+        }, 
+        "7": {
+            "outcome": "impact to system resources from logging messages", 
+            "resolution": "Configure                                                                                           no logging console\nno logging monitor", 
+            "concern": "Messages logging to console"
+        }, 
+        "8": {
+            "outcome": "Unable to detect and be notified when the CPU load on a device crosses a configured threshold. When the threshold is crossed, the device generates and sends an SNMP trap message", 
+            "resolution": "Configure                                                                                     snmp-server enable traps cpu threshold\nsnmp-server host <host-address> <community-string> cpu \nprocess cpu threshold type <type> rising <percentage> interval <seconds> \n     [falling <percentage> interval <seconds>]\nprocess cpu statistics limit entry-percentage <number> [size <seconds>]", 
+            "concern": "Missing configuration to  provide notification when the CPU utilization exceeds a defined threshold."
+        }, 
+        "9": {
+            "outcome": "Unable generates a log message in order to indicate that free memory on a device has fallen lower than the configured threshold", 
+            "resolution": "Configure                                                                                memory free low-watermark processor <threshold>\nmemory free low-watermark io <threshold>", 
+            "concern": "Missing configuration to enables the device to alert on low memory in the processor or IO pools"
+        }, 
+        "10": {
+            "outcome": " 5 769144 Jan 28 2017 06:00:12.0000000000 +00:00 crashinfo_snmp_subagent_20170128-055955-UTC", 
+            "resolution": "Please inform TAC", 
+            "concern": "Software Crash on 28/01/2017 "
+        }, 
+        "13": {
+            "outcome": "Unable to conserve available storage space by restricting the maximum number of crashinfo files stored on a device", 
+            "resolution": "Configure                                                              exception crashinfo maximum files <number-of-files>", 
+            "concern": "Missing enhanced Crashinfo File Collection"
+        }, 
+        "14": {
+            "outcome": "Diviation from security best practises and complience.", 
+            "resolution": "Configure                                                                                                         security passwords min-length length\n", 
+            "concern": "Missing Password minimum length check"
+        }, 
+        "16": {
+            "outcome": "The IP Bootp protocol allows a diskless workstation to configure itself at boot time by dynamically obtaining an IP address. This feature is enabled by default with the commad ip bootp server. This service is usually not needed and should be disabled to improve the security posture of the device.", 
+            "resolution": "Configure                                                                                                         no ip bootp server\n", 
+            "concern": "IP Bootp Server is enabled"
+        }, 
+        "18": {
+            "outcome": "The telnet protocol is enabled as an input for this device. This represents a deviation from security leading practice", 
+            "resolution": "Disable telnet", 
+            "concern": "Telnet enabled"
+        }, 
+        "19": {
+            "outcome": "Due to implementation issues, Type 4 secrets are less resilient to brute-force attacks than a Type 5 password of equivalent complexity, and has been deprecated and replaced by Type 8 and Type 9 secrets. \n", 
+            "resolution": "Configure                                                                      enable secret [ level level ] { [0] unencrypted-password | encryption-type encrypted-password } ", 
+            "concern": "Type 4 password secret found"
+        }, 
+        "20": {
+            "outcome": "Call setup from all unknown sources will be rejected", 
+            "resolution": "IOS Toll fraud prevention is enabled (by default) and call setup from all unknown sources will be rejected. Add IP address trust list to allow calls from desired sources", 
+            "concern": "Toll Fraud Prevention enabled but IP address list is not configured, "
+        }
+    }, 
+    "T1": {
+        "1": {
+            "outcome": "RADIUS client will automatically mark a DEAD RADIUS server ALIVE the minute it is marked DEAD. Every authentication will have to timeout against the DEAD RADIUS server before failover will occure. This behavior can cause excessive authentication wait time", 
+            "resolution": " Use the radius-server deadtime command in global configuration mode to cause the unavailable servers to be skipped immediately", 
+            "concern": "RADIUS deadtime is default of 0, which can cause excessive authentication wait time"
+        }, 
+        "2": {
+            "outcome": "The IP source routing options allows the sender of an IP packet to control the route that the datagram will take toward its ultimate destination, and generally the route that any reply will take. This feature is enabled by default with the commad", 
+            "resolution": "Use the no ip source-route global configuration command ", 
+            "concern": "IP Source Routing is enabled, which is a deviation from the router security hardening best practices"
+        }, 
+        "3": {
+            "outcome": "Malicious user may attempt to interfere with the normal operations of the device by flooding it with connection requests", 
+            "resolution": "Implement login enhancements functionality such as delays between successive login attempts and login shutdown if DoS attacks are suspected http://www.cisco.com/c/en/us/td/docs/ios/sec_user_services/configuration/guide/15_0s/sec_securing_user_services_15_0S_book/sec_login_enhance.html?referring_site=cisco_cli_analyzer#wp1054098", 
+            "concern": "Missing Dictionary attack protection"
+        }, 
+        "4": {
+            "outcome": "Failure to secure the exchange of routing information allows an attacker to introduce false routing information into the network. By using password authentication with routing protocols between routers, you can aid the security of the network. However, because this authentication is sent as cleartext, it can be simple for an attacker to subvert this security control", 
+            "resolution": "configure key chain <key-name>\n key <key-identifier>\n key-string <password> \ninterface <interface>\n ip authentication mode eigrp <as-number> md5\n ip authentication key-chain eigrp <as-number> <key-name>", 
+            "concern": "Missing EIGRP Authentication"
+        }, 
+        "5": {
+            "outcome": "The Network Time Protocol (NTP) is not an especially dangerous service, but any unneeded service can represent an attack vector. If NTP is used, it is important to explicitly configure a trusted time source and to use proper authentication. Accurate and reliable time is required for syslog purposes, such as during forensic investigations of potential attacks, as well as for successful VPN connectivity when depending on certificates for Phase 1 authentication.", 
+            "resolution": "Configure NTP authentication,http://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html?referring_site=cisco_cli_analyzer#anc27", 
+            "concern": "Missing NTP Authentication"
+        }, 
+        "6": {
+            "outcome": "Unable to mitigate low-memory conditions on a dev", 
+            "resolution": "Configure                                                                                memory free low-watermark processor <threshold>\nmemory free low-watermark io <threshold>", 
+            "concern": "Missing configuration to ensures management processes continue to function if memory is exhausted"
+        }, 
+        "7": {
+            "outcome": "impact to system resources from logging messages", 
+            "resolution": "Configure                                                                                           no logging console\nno logging monitor", 
+            "concern": "Messages logging to console"
+        }, 
+        "8": {
+            "outcome": "Unable to detect and be notified when the CPU load on a device crosses a configured threshold. When the threshold is crossed, the device generates and sends an SNMP trap message", 
+            "resolution": "Configure                                                                                     snmp-server enable traps cpu threshold\nsnmp-server host <host-address> <community-string> cpu \nprocess cpu threshold type <type> rising <percentage> interval <seconds> \n     [falling <percentage> interval <seconds>]\nprocess cpu statistics limit entry-percentage <number> [size <seconds>]", 
+            "concern": "Missing configuration to  provide notification when the CPU utilization exceeds a defined threshold."
+        }, 
+        "9": {
+            "outcome": "Unable generates a log message in order to indicate that free memory on a device has fallen lower than the configured threshold", 
+            "resolution": "Configure                                                                                memory free low-watermark processor <threshold>\nmemory free low-watermark io <threshold>", 
+            "concern": "Missing configuration to enables the device to alert on low memory in the processor or IO pools"
+        }, 
+        "10": {
+            "outcome": " SSH version 1 is considered to be unsecure and use of it may have a determental impact on the system.", 
+            "resolution": "Desable SSHv1", 
+            "concern": "The SSH version 1 protocol is enabled"
+        }, 
+        "11": {
+            "outcome": "Allows simple devices such as character-mode terminals to connect to legacy X.25 networks. This feature is enabled by default with the commad service pad. This service is usually not needed and should be disabled to improve the security posture of the device", 
+            "resolution": "Configure                                                                                                         no service pad\n", 
+            "concern": "PAD (packet assembler/disassembler) service is enabled"
+        }, 
+        "12": {
+            "outcome": "Diviation from security best practises and complience.", 
+            "resolution": "Add all necessary banners.", 
+            "concern": "Missing Login Banner"
+        }, 
+        "13": {
+            "outcome": "Unable to conserve available storage space by restricting the maximum number of crashinfo files stored on a device", 
+            "resolution": "Configure                                                              exception crashinfo maximum files <number-of-files>", 
+            "concern": "Missing enhanced Crashinfo File Collection"
+        }, 
+        "14": {
+            "outcome": "Diviation from security best practises and complience.", 
+            "resolution": "Configure                                                                                                         security passwords min-length length\n", 
+            "concern": "Missing Password minimum length check"
+        }, 
+        "15": {
+            "outcome": "Diviation from security best practises and complience.", 
+            "resolution": "Configure                                                                   security authentication failure rate threshold-rate log", 
+            "concern": "Missing \"Failed Login\" notifcations "
+        }, 
+        "16": {
+            "outcome": "The IP Bootp protocol allows a diskless workstation to configure itself at boot time by dynamically obtaining an IP address. This feature is enabled by default with the commad ip bootp server. This service is usually not needed and should be disabled to improve the security posture of the device.", 
+            "resolution": "Configure                                                                                                         no ip bootp server\n", 
+            "concern": "IP Bootp Server is enabled"
+        }, 
+        "17": {
+            "outcome": "MOP (Maintenance Operations Protocol) is a protocol used to communicate with DECNet networks. It is enabled by default on all Ethernet interfaces with the command mop enabled. This service is usually not needed and should be disabled to improve the security posture of the device.", 
+            "resolution": "Configure                                                                                                         no mop enabled\n", 
+            "concern": "MOP (Maintenance Operations Protocol) Service is enabled"
+        }, 
+        "18": {
+            "outcome": "The telnet protocol is enabled as an input for this device. This represents a deviation from security leading practice", 
+            "resolution": "Disable telnet", 
+            "concern": "Telnet enabled"
+        }
+    }
+}
