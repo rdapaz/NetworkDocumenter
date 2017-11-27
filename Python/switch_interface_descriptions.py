@@ -14,11 +14,12 @@ import win32com.client
 # -----------------
 # Utility Functions
 # -----------------
-try:
-    from cStringIO import StringIO
-except NotImplementedError:
-    from StringIO import StringIO
+# try:
+#     from cStringIO import StringIO
+# except NotImplementedError:
+#     from StringIO import StringIO
 
+from io import StringIO
 
 def pretty_print(o):
     print (json.dumps(o, indent=4))
@@ -136,26 +137,18 @@ class ShowCommandAnalyser:
         self.macToIPData = macToIpData
         self.macAddrData = macAddrData
         self.COMMANDS = [
+            'show cdp nei',
+            'show int status',
+            'show ip arp',
+            'show mac add',
+            'show int | inc (rops|otoc)',
             'show run',
             'show ver',
-            'show inv',
-            'show cdp nei',
-            'show ip int brief',
-            'show int status',
-            'show int | inc (rops|otoc)',
-            'show int trans detail',
-            'show mac address-table',
-            'show spanning-tree detail',
-            'show vlan summary',
-            'show vlan brief',
             'show ip route',
-            'show ip igmp groups',
-            'show ip mroute active',
-            'show ip arp',
-            'verify'
+            'show inv',
         ]
         self.cdpNeighboursString = self.commandText('show cdp nei')
-        self.macAddressString = self.commandText('show mac address-table')
+        self.macAddressString = self.commandText('show mac add')
         self.interfaceStatusString = self.commandText('show int status')
         self.macToIPsString = self.commandText('show ip arp') if self.commandText('show ip arp') else ''
 
@@ -219,7 +212,7 @@ class ShowCommandAnalyser:
                     re.search(r'Total cdp entries', line, re.IGNORECASE):
                 continue
             else:
-                print >> out, line
+                print (line, file=out)
 
         input_text = out.getvalue()
 
@@ -309,7 +302,7 @@ class ShowCommandAnalyser:
                     re.search(r'Total Mac', line, re.IGNORECASE):
                 continue
             else:
-                print >> out, line
+                print(line, file=out)
         input_text = out.getvalue()
 
         for line in input_text.splitlines():
@@ -332,6 +325,7 @@ class ShowCommandAnalyser:
             if m:
                 vlan = m.group(1).strip()
                 mac_address = m.group(2).strip()
+                mac_address = "".join(mac_address.split('.'))
                 _ = m.group(3)
                 ifce = m.group(4)
 
@@ -366,7 +360,7 @@ class ShowCommandAnalyser:
             if inside_block and re.search(r'interface Vlan', line, re.IGNORECASE):
                 inside_block = False
             if inside_block:
-                print >> output, line
+                print(line, file=output)
 
         ifce_config_lines = output.getvalue()
 
@@ -423,7 +417,7 @@ class ShowCommandAnalyser:
                                 self.hostName in line:
                     continue
                 else:
-                    print >> out, line
+                    print(line, file=out)
 
             snippet = out.getvalue()
 
@@ -484,7 +478,7 @@ class ShowCommandAnalyser:
             for line in snippet.splitlines():
                 if len(line.split()) == 6:
                     _, ip_addr, _, mac_addr, _, _ = line.split()
-
+                    mac_addr = "".join(mac_addr.split('.'))
                     if mac_addr not in results:
                         results[mac_addr] = ip_addr
         return results
@@ -507,13 +501,17 @@ class Reporter:
         self.macToIPData = macToIpData
         self.macAddrData = macAddrData
         self.ouiMACData = ouiMACData
+        pretty_print(self.cdpData)
+        pretty_print(self.ifceStatusData)
+        pretty_print(self.macAddrData)
+
         self.generateInterfaceDescriptions()
 
     def generateInterfaceDescriptions(self):
         ary = []
-        for switch, rest in self.ifceStatusData.iteritems():
+        for switch, rest in self.ifceStatusData.items():
             print (switch)
-            for ifce, properties in rest.iteritems():
+            for ifce, properties in rest.items():
                 mac = ''
                 oui = ''
                 ip_addr = ''
@@ -523,7 +521,7 @@ class Reporter:
                 mac_ary = []
 
                 def isGEDevice(mac_addr):
-                    oui_prefix = mac_addr[:7]
+                    oui_prefix = mac_addr[:6].lower()
                     return oui_prefix in self.ouiMACData and \
                         self.ouiMACData[oui_prefix] in [
                             'GE Fanuc Automation Manufacturing, Inc.',
@@ -537,11 +535,13 @@ class Reporter:
                 if switch in self.macAddrData and ifce in self.macAddrData[switch]:
                     mac_ary = self.macAddrData[switch][ifce]
                     if len(mac_ary) == 1:
-                        mac = mac_ary[0].upper()
-                        oui = oui_mac_addresses[mac[:7]] if mac[:7] in oui_mac_addresses else 'OUI Not Found'
+                        mac = mac_ary[0].lower()
+                        oui = oui_mac_addresses[mac[:6]] if mac[:6] in oui_mac_addresses else 'OUI Not Found'
                         if mac in self.macToIPData:
                             ip_addr = self.macToIPData[mac]
                     elif len(mac_ary) > 1:
+                        print(switch, ifce, sep="|")
+                        print(switch in self.cdpData and ifce in self.cdpData[switch])
                         if switch in self.cdpData and ifce in self.cdpData[switch]:
                             desc = 'Connects to {} ({}), port {}'.format(self.cdpData[switch][ifce]['remote_switch'],
                                                                          self.cdpData[switch][ifce]['remote_sw_type'],
@@ -549,7 +549,7 @@ class Reporter:
                         elif any([isGEDevice(x) for x in mac_ary]):
                             desc = 'GE Device behind media converter'
                         else:
-                            desc = 'Media Converter/Unmanaged Switch'
+                            desc = 'More than 1 MAC on interface'
 
                 config_desc = re.sub(r'[=]+', '', config_desc)
                 config_desc = re.sub(r'^\s+', '', config_desc)
@@ -567,7 +567,8 @@ class Reporter:
                             desc.upper(),
                             ])
 
-        ary = sorted(ary, key=lambda x: (x[0], map(try_to_i, x[1].split('/'))))
+        # ary = sorted(ary, key=lambda x: (x[0], map(try_to_i, x[1].split('/'))))
+        ary = sorted(ary, key=lambda x: (x[0], [try_to_i(a) for a in x[1].split('/')]))
 
         for entry in ary:
             print ("|".join(entry))
@@ -615,25 +616,26 @@ class Reporter:
                     sh.Range('{}{}'.format(column_name(col + 2), row)).Value2 = val.upper()
 
                 # Write other values
-                sh.Range('B2').Value2 = 'Switch Name:'
-                sh.Range('B4').Value2 = 'Serial No(s).:'
-                sh.Range('B5').Value2 = 'IP Address:'
-                sh.Range('B6').Value2 = 'Switch 1 Type:'
-                sh.Range('B7').Value2 = 'Switch 2 Type:'
-                sh.Range('B8').Value2 = 'Switch 3 Type:'
-                sh.Range('B9').Value2 = 'Switch IOS:'
-                sh.Range('B10').Value2 = 'Switch License:'
-                sh.Range('B11').Value2 = 'Drawing No(s).:'
+                # Lots of change here
+                # sh.Range('B2').Value2 = 'Switch Name:'
+                # sh.Range('B4').Value2 = 'Serial No(s).:'
+                # sh.Range('B5').Value2 = 'IP Address:'
+                # sh.Range('B6').Value2 = 'Switch 1 Type:'
+                # sh.Range('B7').Value2 = 'Switch 2 Type:'
+                # sh.Range('B8').Value2 = 'Switch 3 Type:'
+                # sh.Range('B9').Value2 = 'Switch IOS:'
+                # sh.Range('B10').Value2 = 'Switch License:'
+                # sh.Range('B11').Value2 = 'Drawing No(s).:'
 
-                sh.Range('C2').Value2 = entry[0]
-                sh.Range('C4').Value2 = ''
-                sh.Range('C5').FormulaR1C1 = '=vlookup(RC[-1], ip_addresses, 1, 0)'
-                sh.Range('C6').FormulaR1C1 = '=vlookup(RC[-1], switch_details, 4, 0)'
-                sh.Range('C7').Value2 = 'Not Applicable'
-                sh.Range('C8').Value2 = 'Not Applicable'
-                sh.Range('C9').Value2 = '=vlookup(RC[-1], switch_details, 5, 0)'
-                sh.Range('C10').Value2 = '=vlookup(RC[-1], switch_details, 6, 0)'
-                sh.Range('C11').Value2 = ''
+                # sh.Range('C2').Value2 = entry[0]
+                # sh.Range('C4').Value2 = ''
+                # sh.Range('C5').FormulaR1C1 = '=vlookup(RC[-1], ip_addresses, 1, 0)'
+                # sh.Range('C6').FormulaR1C1 = '=vlookup(RC[-1], switch_details, 4, 0)'
+                # sh.Range('C7').Value2 = 'Not Applicable'
+                # sh.Range('C8').Value2 = 'Not Applicable'
+                # sh.Range('C9').Value2 = '=vlookup(RC[-1], switch_details, 5, 0)'
+                # sh.Range('C10').Value2 = '=vlookup(RC[-1], switch_details, 6, 0)'
+                # sh.Range('C11').Value2 = ''
 
             # Write data
             row += 1
@@ -652,13 +654,18 @@ if __name__ == '__main__':
     ###################################################################################
     # ROOT = r'C:\Users\Ricardo'  # TODO: modify this to suit in target machine
 
-    ROOT = r'C:\Users\ric\projects'  # TODO: modify this to suit in target machine
+    ROOT = r'.'  # TODO: modify this to suit in target machine
     ##################################################################################
 
-    rootdir = os.path.join(ROOT, 'scripted-tools', 'WP_OT_Environment')
+    rootdir = os.path.join(ROOT, 'ShowCommands')
 
-    with open(os.path.join(rootdir, r'oui_mac_addresses.json'), 'r') as infile:
+
+    with open(r'C:\Users\rdapaz\Documents\wp-fy17\Python\mac_addresses.json', 'r') as infile:
         oui_mac_addresses = json.load(infile)
+
+
+    # with open(os.path.join(rootdir, r'oui_mac_addresses.json'), 'r') as infile:
+    #     oui_mac_addresses = json.load(infile)
 
     for subdir, dirs, files in os.walk(rootdir):
         for my_file in files:

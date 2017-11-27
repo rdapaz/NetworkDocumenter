@@ -2820,7 +2820,7 @@
 00:0A:E7	EliopSA	Eliop S.A.
 00:0A:E8	CathayRo	Cathay Roxus Information Technology Co. LTD
 00:0A:E9	AirvastT	AirVast Technology Inc.
-00:0A:EA	AdamElek	ADAM ELEKTRONIK LTD. ŞTI
+00:0A:EA	AdamElek	ADAM ELEKTRONIK LTD. STI
 00:0A:EB	Tp-LinkT	TP-LINK TECHNOLOGIES CO.,LTD.
 00:0A:EC	KoatsuGa	Koatsu Gas Kogyo Co., Ltd.
 00:0A:ED	HartingE	HARTING Electronics GmbH
@@ -3575,7 +3575,7 @@
 00:0D:DA	AlliedTe	Allied Telesis K.K.
 00:0D:DB	AirwaveT	Airwave Technologies Inc.
 00:0D:DC	Vac
-00:0D:DD	ProfiloT	Profilo Telra Elektronik Sanayi ve Ticaret. A.Ş
+00:0D:DD	ProfiloT	Profilo Telra Elektronik Sanayi ve Ticaret. A.S.
 00:0D:DE	Joyteck	Joyteck Co., Ltd.
 00:0D:DF	JapanIma	Japan Image & Network Inc.
 00:0D:E0	Icpdas	ICPDAS Co.,LTD
@@ -15136,22 +15136,6 @@
 00:54:BD	Swelaser	Swelaser AB
 00:55:00	Xerox
 00:55:DA	IeeeRegi	IEEE Registration Authority
-00:55:DA:00:00:00/28	ShinkoTe	Shinko Technos co.,ltd.
-00:55:DA:10:00:00/28	Koolpos	KoolPOS Inc.
-00:55:DA:20:00:00/28	BeijingC	Beijing Connected Information Technology Co.,Ltd.
-00:55:DA:30:00:00/28	NovexxSo	Novexx Solutions GmbH
-00:55:DA:40:00:00/28	Datapath	Datapath Limited
-00:55:DA:50:00:00/28	Nanoleaf
-00:55:DA:60:00:00/28	OooDekat	Ooo Dekatron
-00:55:DA:70:00:00/28	Lucistec	LUCISTECHNOLOGIES（SHANGHAI）CO.,LTD
-00:55:DA:80:00:00/28	Broadsof	BroadSoft, Inc.
-00:55:DA:90:00:00/28	QuantumC	Quantum Communication Technology Co., Ltd.,Anhui
-00:55:DA:A0:00:00/28	Speechla	Speechlab
-00:55:DA:B0:00:00/28	Interaxo	Interaxon Inc
-00:55:DA:C0:00:00/28	DonguanW	Donguan WideLink Communication Technology Co.,Ltd.
-00:55:DA:D0:00:00/28	ArrowEle	Arrow Electronics,Inc.
-00:55:DA:E0:00:00/28	Victorsu	Victorsure Limited
-00:55:DA:F0:00:00/28	Private
 00:56:2B	Cisco	Cisco Systems, Inc
 00:56:CD	Apple	Apple, Inc.
 00:57:D2	Cisco	Cisco Systems, Inc
@@ -15428,7 +15412,6 @@
 00:64:40	Cisco	Cisco Systems, Inc
 00:64:A6	MaquetCa	Maquet CardioVascular
 00:66:4B	HuaweiTe	Huawei Technologies Co.,Ltd
-00:6B:8E	Shanghai	Shanghai Feixun Communication Co.,Ltd.
 00:6B:9E	Vizio	Vizio, Inc
 00:6B:A0	Shenzhen	Shenzhen Universal Intellisys Pte Ltd
 00:6B:F1	Cisco	Cisco Systems, Inc
