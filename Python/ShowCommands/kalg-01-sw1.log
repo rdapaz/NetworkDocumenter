@@ -1,0 +1,1258 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.12.07 10:59:57 =~=~=~=~=~=~=~=~=~=~=~=
+
+kalg-01-sw1#
+kalg-01-sw1#term
+kalg-01-sw1#terminal le
+kalg-01-sw1#terminal length 0
+kalg-01-sw1#Show cdp nei
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+KALG-01-SW2.ads.westernpower.com.au
+                 Gig 1/0/22        145             R S I  WS-C3650- Gig 1/1/2
+KALG-01-SW2.ads.westernpower.com.au
+                 Gig 1/0/21        152             R S I  WS-C3650- Gig 1/1/1
+kalg-vg224.westernpower.com.au
+                 Gig 1/0/23        143               R    VG224     Fas 0/1
+KALG-01-R1.ads.westernpower.com.au
+                 Gig 1/0/24        177             R S I  ISR4331/K Gig 0/0/0
+kalg-01-sw1#Show int status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1                      disabled     1            auto   auto 10/100/1000BaseTX
+Gi1/0/2                      disabled     1            auto   auto 10/100/1000BaseTX
+Gi1/0/3                      disabled     1            auto   auto 10/100/1000BaseTX
+Gi1/0/4                      disabled     1            auto   auto 10/100/1000BaseTX
+Gi1/0/5   Cardex access      connected    480        a-full a-1000 10/100/1000BaseTX
+Gi1/0/6   SC 333390 CheckPoi notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/7                      notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/8                      notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/9                      notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/10                     notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/11                     notconnect   999          auto   auto 10/100/1000BaseTX
+Gi1/0/12                     notconnect   999          auto   auto 10/100/1000BaseTX
+Gi1/0/13                     connected    901        a-full  a-100 10/100/1000BaseTX
+Gi1/0/14                     notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/15                     notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/16                     notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/17                     notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/18                     notconnect   499          auto   auto 10/100/1000BaseTX
+Gi1/0/19  ESX iSCSI #1       notconnect   492          auto   auto 10/100/1000BaseTX
+Gi1/0/20  STEELHEAD_MANAGEME connected    399        a-full a-1000 10/100/1000BaseTX
+Gi1/0/21  kalg-01-sw2 Gi1/0/ connected    routed     a-full a-1000 10/100/1000BaseTX
+Gi1/0/22  kalg-01-sw2 Gi2/0/ connected    routed     a-full a-1000 10/100/1000BaseTX
+Gi1/0/23  kalg-vgate Fa0/1   connected    routed     a-full  a-100 10/100/1000BaseTX
+Gi1/0/24  kalg-01-r1 Fa0/1   connected    routed     a-full a-1000 10/100/1000BaseTX
+Gi1/0/25                     disabled     routed       auto   auto Not Present
+Gi1/0/26                     disabled     routed       auto   auto Not Present
+Gi1/0/27                     disabled     routed       auto   auto Not Present
+Gi1/0/28                     disabled     routed       auto   auto Not Present
+kalg-01-sw1#Show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.76.0.1               -   fcfb.fba2.22ce  ARPA   Vlan499
+Internet  10.76.6.1               -   fcfb.fba2.22cd  ARPA   Vlan493
+Internet  10.76.7.1               -   fcfb.fba2.22cc  ARPA   Vlan492
+Internet  10.76.22.1              -   fcfb.fba2.22cf  ARPA   Vlan799
+Internet  10.76.24.1              -   fcfb.fba2.22d2  ARPA   Vlan999
+Internet  10.76.224.1             -   fcfb.fba2.22ca  ARPA   Vlan480
+Internet  10.76.224.10            0   001c.7f22.239a  ARPA   Vlan480
+Internet  10.76.241.1             -   fcfb.fba2.22c9  ARPA   Vlan399
+Internet  10.76.241.5           157   000e.b64c.eb90  ARPA   Vlan399
+Internet  10.76.242.1            50   00f8.2c15.4370  ARPA   GigabitEthernet1/0/24
+Internet  10.76.242.2             -   fcfb.fba2.22c4  ARPA   GigabitEthernet1/0/24
+Internet  10.76.242.21            -   fcfb.fba2.22c3  ARPA   GigabitEthernet1/0/23
+Internet  10.76.242.22           74   0024.14ae.61dc  ARPA   GigabitEthernet1/0/23
+Internet  10.76.242.25            -   fcfb.fba2.22c1  ARPA   GigabitEthernet1/0/21
+Internet  10.76.242.26          208   f40f.1b97.82c6  ARPA   GigabitEthernet1/0/21
+Internet  10.76.242.29            2   f40f.1b97.82c8  ARPA   GigabitEthernet1/0/22
+Internet  10.76.242.30            -   fcfb.fba2.22c2  ARPA   GigabitEthernet1/0/22
+Internet  10.76.254.1             -   fcfb.fba2.22d0  ARPA   Vlan901
+Internet  10.76.254.4             6   00e0.d818.99fb  ARPA   Vlan901
+kalg-01-sw1#Show mac add
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 901    00e0.d818.99fb    DYNAMIC     Gi1/0/13
+ 480    001c.7f22.239a    DYNAMIC     Gi1/0/5
+ 399    000e.b64c.eb90    DYNAMIC     Gi1/0/20
+Total Mac Addresses for this criterion: 23
+kalg-01-sw1#Show int | inc (rops|otoc)
+Vlan1 is administratively down, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan399 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan480 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan487 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan492 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan493 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan499 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan799 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan901 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan998 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan999 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan1999 is down, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/1 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/2 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/3 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/4 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/5 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/6 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/7 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/8 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/9 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/10 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/11 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/12 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/13 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/14 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/15 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/16 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/17 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/18 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/19 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/20 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/21 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/22 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/23 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/24 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/25 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/26 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/27 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/28 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Loopback1 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Loopback161 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+kalg-01-sw1#Show run
+Building configuration...
+
+Current configuration : 15449 bytes
+!
+! No configuration change since last restart
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+!
+hostname kalg-01-sw1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 64000
+no logging console
+enable secret 4 26Y5WbmBWDgWHIvNLDC6rcFPZFfZmn/Bmjb2/s10MhI
+!
+username westernpower privilege 15 secret 4 26Y5WbmBWDgWHIvNLDC6rcFPZFfZmn/Bmjb2/s10MhI
+aaa new-model
+!
+!
+aaa authentication fail-message ^CC
+ ********************************************************************
+ *      The supplied Username and/or Password is not valid.         *
+ *  This failed login attempt has been recorded for audit purposes. *
+ ********************************************************************
+^C
+aaa authentication login default group radius local
+aaa authentication login console enable
+aaa authorization exec default if-authenticated 
+aaa accounting send stop-record authentication failure
+aaa accounting exec default start-stop group radius
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone WST 8 0
+switch 1 provision ws-c3750g-24ts-1u
+system mtu routing 1500
+vtp domain KALG
+vtp mode transparent
+udld enable
+
+no ip source-route
+ip routing
+no ip domain-lookup
+ip domain-name ads.westernpower.com.au
+!
+!
+!
+ip multicast-routing distributed
+login on-failure log
+login on-success log
+!
+mls qos map cos-dscp 0 8 16 24 32 46 48 56
+mls qos srr-queue input bandwidth 70 30
+mls qos srr-queue input threshold 1 80 90
+mls qos srr-queue input priority-queue 2 bandwidth 30
+mls qos srr-queue input cos-map queue 1 threshold 2 3
+mls qos srr-queue input cos-map queue 1 threshold 3 6 7
+mls qos srr-queue input cos-map queue 2 threshold 1 4
+mls qos srr-queue input dscp-map queue 1 threshold 2 24
+mls qos srr-queue input dscp-map queue 1 threshold 3 48 49 50 51 52 53 54 55
+mls qos srr-queue input dscp-map queue 1 threshold 3 56 57 58 59 60 61 62 63
+mls qos srr-queue input dscp-map queue 2 threshold 3 32 33 40 41 42 43 44 45
+mls qos srr-queue input dscp-map queue 2 threshold 3 46 47
+mls qos srr-queue output cos-map queue 1 threshold 3 4 5
+mls qos srr-queue output cos-map queue 2 threshold 1 2
+mls qos srr-queue output cos-map queue 2 threshold 2 3
+mls qos srr-queue output cos-map queue 2 threshold 3 6 7
+mls qos srr-queue output cos-map queue 3 threshold 3 0
+mls qos srr-queue output cos-map queue 4 threshold 3 1
+mls qos srr-queue output dscp-map queue 1 threshold 3 32 33 40 41 42 43 44 45
+mls qos srr-queue output dscp-map queue 1 threshold 3 46 47
+mls qos srr-queue output dscp-map queue 2 threshold 1 16 17 18 19 20 21 22 23
+mls qos srr-queue output dscp-map queue 2 threshold 1 26 27 28 29 30 31 34 35
+mls qos srr-queue output dscp-map queue 2 threshold 1 36 37 38 39
+mls qos srr-queue output dscp-map queue 2 threshold 2 24
+mls qos srr-queue output dscp-map queue 2 threshold 3 48 49 50 51 52 53 54 55
+mls qos srr-queue output dscp-map queue 2 threshold 3 56 57 58 59 60 61 62 63
+mls qos srr-queue output dscp-map queue 3 threshold 3 0 1 2 3 4 5 6 7
+mls qos srr-queue output dscp-map queue 4 threshold 1 8 9 11 13 15
+mls qos srr-queue output dscp-map queue 4 threshold 2 10 12 14
+mls qos queue-set output 1 threshold 1 100 100 50 200
+mls qos queue-set output 1 threshold 2 125 125 100 400
+mls qos queue-set output 1 threshold 3 100 100 100 400
+mls qos queue-set output 1 threshold 4 60 150 50 200
+mls qos queue-set output 1 buffers 15 25 40 20
+mls qos
+!
+crypto pki trustpoint TP-self-signed-4221706880
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-4221706880
+ revocation-check none
+ rsakeypair TP-self-signed-4221706880
+!
+!
+crypto pki certificate chain TP-self-signed-4221706880
+ certificate self-signed 01
+  3082025D 308201C6 A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 34323231 37303638 3830301E 170D3933 30333031 30303032 
+  34315A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D34 32323137 
+  30363838 3030819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100E033 CCB5EE42 5F2FCEFF F971EE80 497A7B1C 12C7222A B388B9DE 95AA35F2 
+  17838D11 B561885F AF18FD1E 18F5CC7E 12EA7739 B18CE723 0340D200 303DFB65 
+  2C8F3664 9FB51319 7C1EF444 BD178F92 3115C266 7583E0CE 85FCEFB6 92586D46 
+  DFFDF980 A18AA711 40E02252 9AE2D29B E24E8038 9DFF115B 8F7C0262 C0BC2783 
+  B95B0203 010001A3 81843081 81300F06 03551D13 0101FF04 05300301 01FF302E 
+  0603551D 11042730 2582236B 616C672D 30312D73 77312E61 64732E77 65737465 
+  726E706F 7765722E 636F6D2E 6175301F 0603551D 23041830 168014D4 103051E1 
+  4D5B0786 D02CAB14 FC290774 0D516D30 1D060355 1D0E0416 0414D410 3051E14D 
+  5B0786D0 2CAB14FC 2907740D 516D300D 06092A86 4886F70D 01010405 00038181 
+  000C0302 BAB5081A 95518987 3F263F86 3DE180C4 BBD144B1 B754A48D 2B34526D 
+  F8ABC715 886B0E9F 6A2BFFB8 47065776 A2F3F71B F1E566F1 8113515C 31BD953B 
+  A455A220 DF53BC08 DFEBCC75 CD81803E DC2DD387 8D484106 7CDD3979 64F60686 
+  D1504FDB 0B84E657 7B694C43 84A83642 53F2CDC7 0A58F136 484EAB99 E7B0D587 04
+  	quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 399
+ name STEELHEAD_MANAGEMENT
+!
+vlan 480
+ name SECURITY
+!
+vlan 487
+ name UNIX_SERVERS_PROD_1
+!
+vlan 492
+ name WINTEL_SERVERS_ADMIN
+!
+vlan 493
+ name WINTEL_SERVERS_VMOTION
+!
+vlan 499
+ name WINTEL_SERVERS_PROD_1
+!
+vlan 799 
+!
+vlan 901
+ name ANCILLIARY_MANAGEMENT
+!
+vlan 998
+ name UNIX_OoB_MANAGEMENT
+!
+vlan 999
+ name WINTEL_OoB_MANAGEMENT
+!
+ip telnet source-interface Loopback1
+ip ssh version 2
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback1
+ description MGT Address
+ ip address 10.76.240.5 255.255.255.255
+!
+interface Loopback161
+ description *** Anycast RP Address ONLY ***
+ ip address 10.76.240.24 255.255.255.255
+ ip pim sparse-mode
+!
+interface GigabitEthernet1/0/1
+ shutdown
+!
+interface GigabitEthernet1/0/2
+ shutdown
+!
+interface GigabitEthernet1/0/3
+ shutdown
+!
+interface GigabitEthernet1/0/4
+ shutdown
+!
+interface GigabitEthernet1/0/5
+ description Cardex access
+ switchport access vlan 480
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/6
+ description SC 333390 CheckPoint VPN
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/7
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/8
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/9
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/10
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/11
+ switchport access vlan 999
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/12
+ switchport access vlan 999
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/13
+ switchport access vlan 901
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/14
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/15
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/16
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/17
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/18
+ switchport access vlan 499
+ switchport mode access
+ no mdix auto
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/19
+ description ESX iSCSI #1
+ switchport access vlan 492
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/20
+ description STEELHEAD_MANAGEMENT
+ switchport access vlan 399
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/21
+ description kalg-01-sw2 Gi1/0/1
+ no switchport
+ ip address 10.76.242.25 255.255.255.252
+ ip pim sparse-mode
+ srr-queue bandwidth share 1 30 35 5
+ priority-queue out 
+ mls qos trust dscp
+ auto qos trust 
+!
+interface GigabitEthernet1/0/22
+ description kalg-01-sw2 Gi2/0/1
+ no switchport
+ ip address 10.76.242.30 255.255.255.252
+ ip pim sparse-mode
+ srr-queue bandwidth share 1 30 35 5
+ priority-queue out 
+ mls qos trust dscp
+ auto qos trust 
+!
+interface GigabitEthernet1/0/23
+ description kalg-vgate Fa0/1
+ no switchport
+ ip address 10.76.242.21 255.255.255.252
+ ip hello-interval eigrp 76 1
+ ip hold-time eigrp 76 3
+ ip pim sparse-mode
+!
+interface GigabitEthernet1/0/24
+ description kalg-01-r1 Fa0/1
+ no switchport
+ ip address 10.76.242.2 255.255.255.248
+ ip hello-interval eigrp 76 1
+ ip hold-time eigrp 76 3
+ ip pim sparse-mode
+ ip summary-address eigrp 76 10.76.0.0 255.255.128.0
+ ip summary-address eigrp 76 10.76.128.0 255.255.128.0
+!
+interface GigabitEthernet1/0/25
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/26
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/27
+ no switchport
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/28
+ no switchport
+ no ip address
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan399
+ description STEELHEAD_MANAGEMENT
+ ip address 10.76.241.1 255.255.255.248
+!
+interface Vlan480
+ description SECURITY
+ ip address 10.76.224.1 255.255.255.0
+!
+interface Vlan487
+ no ip address
+!
+interface Vlan492
+ description Wintel Servers - Administration
+ ip address 10.76.7.1 255.255.255.0
+!
+interface Vlan493
+ description Wintel Servers - ESX VMotion
+ ip address 10.76.6.1 255.255.255.0
+!
+interface Vlan499
+ description Wintel Servers - Production 1
+ ip address 10.76.0.1 255.255.255.0
+!
+interface Vlan799
+ description Servers - iSCSI 1
+ ip address 10.76.22.1 255.255.255.0
+!
+interface Vlan901
+ description Ancilliary Device Management
+ ip address 10.76.254.1 255.255.255.0
+!
+interface Vlan998
+ no ip address
+!
+interface Vlan999
+ ip address 10.76.24.1 255.255.255.0
+!
+interface Vlan1999
+ no ip address
+!
+!
+router eigrp 76
+ network 10.76.242.0 0.0.0.255
+ redistribute connected
+!
+no ip http server
+ip http secure-server
+!
+!
+ip pim rp-address 10.76.240.24
+!
+ip access-list standard APIC_EM
+ remark --- APIC-EM Appliance ---
+ permit 10.25.253.10
+ deny   any
+ip access-list standard NSG_TELNET
+ permit 10.19.250.1
+ permit 10.19.60.0 0.0.0.255
+ permit 172.24.9.0 0.0.0.255
+ permit 146.195.135.0 0.0.0.127
+ permit 10.250.250.0 0.0.0.255
+ permit 172.16.0.0 0.0.255.255
+ permit 10.19.7.62 0.0.0.1
+ deny   any log
+ip access-list standard NSG_TELNET_SSH
+ permit 146.195.81.24
+ remark --- Nimsoft/CatTools Server Natted IP ---
+ permit 146.195.81.25
+ remark --- Nimsoft/CatTools Server ---
+ permit 10.19.7.62
+ remark --- HO Jumphost ---
+ permit 172.30.0.10
+ remark --- APIC EM - Controller ---
+ permit 10.25.253.10
+ permit 10.19.12.234
+ remark --- Twister - OLD and NEW IP ---
+ permit 146.195.135.0 0.0.0.127
+ remark --- IT Subnet on Lvl2E ---
+ permit 10.19.60.0 0.0.0.255
+ remark --- SEAL WAN Subnet ---
+ permit 10.250.250.0 0.0.0.255
+ remark --- GWIP HO WAN Subnet ---
+ permit 10.19.250.0 0.0.0.7
+ remark --- Management Loopback subnet ---
+ permit 10.0.240.0 0.255.0.255
+ remark --- Empired Management Subnet ---
+ permit 172.30.160.0 0.0.0.15
+ remark --- Deny Anything Else ---
+ deny   any log
+ip access-list standard RO_SNMP
+ remark --- Solarwinds Syslog Server ---
+ permit 10.19.7.46
+ remark --- Empired Management Subnet ---
+ permit 172.30.160.0 0.0.0.255
+ remark --- IT Subnet on Lvl2E ---
+ permit 10.19.60.0 0.0.0.255
+ deny   any
+ip access-list standard RW_SNMP
+ remark ---allow NNMi---
+ permit 172.30.160.10
+ deny   any
+!
+ip radius source-interface Loopback1 
+logging trap debugging
+logging source-interface Loopback1
+logging host 10.19.7.46
+logging host 172.30.160.11
+logging host 172.30.160.10
+logging host 172.30.161.10
+access-list 5 permit 10.19.1.17 log
+access-list 5 remark CSC Zetta - Allow Remote wakeup PC's
+access-list 5 permit 10.19.7.49 log
+access-list 5 permit 10.19.1.138 log
+access-list 5 permit 10.19.1.134 log
+access-list 101 permit tcp any any range 1645 1646
+access-list 102 permit ip any any log
+!
+snmp-server community eb6cIzuB RO RO_SNMP
+snmp-server community Sp7ZyvwQ RW RW_SNMP
+snmp-server community fc7cJzuC RO APIC_EM
+snmp-server community gd8cKzuD RW APIC_EM
+snmp-server location Kalgoorlie Depot - T1 - Admin Building
+snmp-server contact Network Systems x5444
+snmp-server enable traps license
+snmp-server host 146.195.135.50 eb6cIzuB 
+snmp ifmib ifindex persist
+radius-server host 10.19.1.113
+radius-server host 10.21.0.24
+radius-server key 7 141D0623200A322508700001641D16052B15731856497F16350E3F790D137B48655106520A110E5D5C3715145901295D2C421E585F3F1F190219311B7A31326A1A
+radius-server load-balance method least-outstanding
+!
+!
+!
+banner exec ^C
+ ********************************************************************
+ * You are now logged into: WP                                      *
+ * All activity is being logged for review by System Administrators *
+ ********************************************************************
+^C
+banner login ^C
+ ********************************************************************
+ * [WARNING]                                                        *
+ *                                                                  *
+ * This system belongs to a private organisation. If you are not    *
+ * authorised to access this system, exit immediately.              *
+ * Unauthorised access to this system is forbidden by company       *
+ * policies, national, and international laws.                      *
+ * Unauthorised users are subject to criminal and civil penalties   *
+ * as well as company initiated disciplinary proceedings.           *
+ * By entry into this system you acknowledge that you are           *
+ * authorised access and the level of privilege you subsequently    *
+ * execute on this system. You further acknowledge that by entry    *
+ * into this system you expect no privacy from monitoring.          *
+ *                                                                  *
+ *        ALL ACCESS TO THIS SYSTEM IS MONITORED AND LOGGED         *
+ *                                                                  *
+ ********************************************************************
+^C
+!
+line con 0
+ exec-timeout 15 0
+ logging synchronous
+ login authentication console
+ transport output telnet
+line vty 0 4
+ access-class NSG_TELNET_SSH in
+ exec-timeout 15 0
+ transport input ssh
+ transport output ssh
+line vty 5 15
+ access-class NSG_TELNET_SSH in
+ exec-timeout 15 0
+ transport input ssh
+ transport output ssh
+!
+ntp server 146.195.128.175
+end
+
+kalg-01-sw1#Show ver
+Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M), Version 15.0(2)SE10, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Mon 18-Jul-16 02:11 by prod_rel_team
+
+ROM: Bootstrap program is C3750 boot loader
+BOOTLDR: C3750 Boot Loader (C3750-HBOOT-M) Version 12.2(44)SE5, RELEASE SOFTWARE (fc1)
+
+kalg-01-sw1 uptime is 2 weeks, 4 days, 4 hours, 42 minutes
+System returned to ROM by power-on
+System restarted at 06:18:09 WST Sun Nov 19 2017
+System image file is "flash:/c3750-ipservicesk9-mz.150-2.SE10.bin"
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C3750G-24TS-1U (PowerPC405) processor (revision F0) with 131072K bytes of memory.
+Processor board ID FOC1407Y1UR
+Last reset from power-on
+12 Virtual Ethernet interfaces
+28 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : FC:FB:FB:A2:22:80
+Motherboard assembly number     : 73-10219-07
+Power supply part number        : 341-0098-02
+Motherboard serial number       : FOC14072VHH
+Power supply serial number      : AZS140416U3
+Model revision number           : F0
+Motherboard revision number     : F0
+Model number                    : WS-C3750G-24TS-E1U
+System serial number            : FOC1407Y1UR
+Top Assembly Part Number        : 800-27484-01
+Top Assembly Revision Number    : F0
+Version ID                      : V03
+CLEI Code Number                : CNMWZ00ARC
+Hardware Board Revision Number  : 0x09
+
+
+Switch Ports Model              SW Version            SW Image                 
+------ ----- -----              ----------            ----------               
+*    1 28    WS-C3750G-24TS-1U  15.0(2)SE10           C3750-IPSERVICESK9-M     
+
+
+Configuration register is 0xF
+
+kalg-01-sw1#Show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 10.76.242.1 to network 0.0.0.0
+
+D*EX  0.0.0.0/0 [170/2562816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      10.0.0.0/8 is variably subnetted, 154 subnets, 9 masks
+D EX     10.18.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.19.0.0/16 
+           [170/2562816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.19.240.1/32 
+           [170/2562816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.19.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.21.240.1/32 
+           [170/5122816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.21.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.25.243.136/30 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     10.25.252.0/28 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     10.65.0.0/16 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     10.65.243.136/30 
+           [170/2562816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.65.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.65.252.0/28 
+           [170/2562816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.66.0.0/16 
+           [170/25602816] via 10.76.242.1, 16:39:39, GigabitEthernet1/0/24
+D EX     10.66.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.66.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.66.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.66.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.67.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.67.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.67.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.68.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.68.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.68.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.69.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.69.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.69.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.70.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:17:18, GigabitEthernet1/0/24
+D EX     10.70.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.70.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.70.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.70.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.71.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.71.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.71.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.72.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:16:56, GigabitEthernet1/0/24
+D EX     10.72.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.72.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.72.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.72.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.73.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.73.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.73.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.74.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.75.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.75.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.75.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.76.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:02:48, GigabitEthernet1/0/24
+D        10.76.0.0/17 is a summary, 2w4d, Null0
+D        10.76.64.0/24 [90/3072] via 10.76.242.29, 2w4d, GigabitEthernet1/0/22
+                       [90/3072] via 10.76.242.26, 2w4d, GigabitEthernet1/0/21
+D        10.76.96.0/24 [90/3072] via 10.76.242.29, 2w4d, GigabitEthernet1/0/22
+                       [90/3072] via 10.76.242.26, 2w4d, GigabitEthernet1/0/21
+D        10.76.128.0/17 is a summary, 2w4d, Null0
+D        10.76.128.0/24 
+           [90/3072] via 10.76.242.29, 2w4d, GigabitEthernet1/0/22
+           [90/3072] via 10.76.242.26, 2w4d, GigabitEthernet1/0/21
+C        10.76.224.0/24 is directly connected, Vlan480
+L        10.76.224.1/32 is directly connected, Vlan480
+D        10.76.240.1/32 
+           [90/130816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+C        10.76.240.5/32 is directly connected, Loopback1
+D        10.76.240.7/32 
+           [90/156160] via 10.76.242.22, 2w4d, GigabitEthernet1/0/23
+D        10.76.240.8/32 
+           [90/130816] via 10.76.242.29, 2w4d, GigabitEthernet1/0/22
+           [90/130816] via 10.76.242.26, 2w4d, GigabitEthernet1/0/21
+C        10.76.240.24/32 is directly connected, Loopback161
+C        10.76.241.0/29 is directly connected, Vlan399
+L        10.76.241.1/32 is directly connected, Vlan399
+C        10.76.242.0/29 is directly connected, GigabitEthernet1/0/24
+L        10.76.242.2/32 is directly connected, GigabitEthernet1/0/24
+C        10.76.242.20/30 is directly connected, GigabitEthernet1/0/23
+L        10.76.242.21/32 is directly connected, GigabitEthernet1/0/23
+C        10.76.242.24/30 is directly connected, GigabitEthernet1/0/21
+L        10.76.242.25/32 is directly connected, GigabitEthernet1/0/21
+C        10.76.242.28/30 is directly connected, GigabitEthernet1/0/22
+L        10.76.242.30/32 is directly connected, GigabitEthernet1/0/22
+D        10.76.246.0/27 
+           [90/3072] via 10.76.242.29, 2w4d, GigabitEthernet1/0/22
+           [90/3072] via 10.76.242.26, 2w4d, GigabitEthernet1/0/21
+D        10.76.250.0/29 
+           [90/642816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+C        10.76.254.0/24 is directly connected, Vlan901
+L        10.76.254.1/32 is directly connected, Vlan901
+D EX     10.77.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:15:28, GigabitEthernet1/0/24
+D EX     10.77.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.77.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.77.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.78.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.78.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.78.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.79.0.0/16 
+           [170/25602816] via 10.76.242.1, 22:55:36, GigabitEthernet1/0/24
+D EX     10.79.240.1/32 
+           [170/25602816] via 10.76.242.1, 22:55:36, GigabitEthernet1/0/24
+D EX     10.79.250.0/30 
+           [170/25602816] via 10.76.242.1, 22:55:39, GigabitEthernet1/0/24
+D EX     10.80.0.0/16 
+           [170/25602816] via 10.76.242.1, 01:17:03, GigabitEthernet1/0/24
+D EX     10.80.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.80.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.80.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.80.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.81.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:45:02, GigabitEthernet1/0/24
+D EX     10.81.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.81.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.81.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.81.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.84.0.0/16 
+           [170/25602816] via 10.76.242.1, 21:37:10, GigabitEthernet1/0/24
+D EX     10.84.0.0/17 
+           [170/25602816] via 10.76.242.1, 1w0d, GigabitEthernet1/0/24
+D EX     10.84.128.0/17 
+           [170/25602816] via 10.76.242.1, 1w0d, GigabitEthernet1/0/24
+D EX     10.84.240.1/32 
+           [170/25602816] via 10.76.242.1, 1w0d, GigabitEthernet1/0/24
+D EX     10.84.250.0/30 
+           [170/25602816] via 10.76.242.1, 1w0d, GigabitEthernet1/0/24
+D EX     10.85.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:17:18, GigabitEthernet1/0/24
+D EX     10.85.0.0/17 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.85.128.0/17 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.85.240.1/32 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.85.250.0/30 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.86.0.0/16 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.86.64.16/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.86.64.20/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.86.65.16/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.86.65.20/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.86.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.87.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:00:13, GigabitEthernet1/0/24
+D EX     10.87.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.87.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.87.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.87.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.88.0.0/16 
+           [170/25602816] via 10.76.242.1, 6d13h, GigabitEthernet1/0/24
+D EX     10.88.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.88.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.88.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.88.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.89.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:15:58, GigabitEthernet1/0/24
+D EX     10.89.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.89.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.89.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.89.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.90.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:26:42, GigabitEthernet1/0/24
+D EX     10.90.0.0/17 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.90.128.0/17 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.90.240.1/32 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.90.250.0/30 
+           [170/25602816] via 10.76.242.1, 2d08h, GigabitEthernet1/0/24
+D EX     10.91.0.0/16 
+           [170/25602816] via 10.76.242.1, 2d09h, GigabitEthernet1/0/24
+D EX     10.91.240.1/32 
+           [170/25602816] via 10.76.242.1, 2d09h, GigabitEthernet1/0/24
+D EX     10.91.250.0/30 
+           [170/25602816] via 10.76.242.1, 2d09h, GigabitEthernet1/0/24
+D EX     10.92.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.92.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.92.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.92.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.93.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.93.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.93.240.1/32 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.93.250.0/30 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.97.0.0/16 
+           [170/25602816] via 10.76.242.1, 3d16h, GigabitEthernet1/0/24
+D EX     10.97.250.0/29 
+           [170/25602816] via 10.76.242.1, 3d16h, GigabitEthernet1/0/24
+D EX     10.98.0.0/16 
+           [170/25602816] via 10.76.242.1, 00:44:47, GigabitEthernet1/0/24
+D EX     10.98.0.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.98.128.0/17 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.98.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.102.0.0/16 
+           [170/25602816] via 10.76.242.1, 05:51:28, GigabitEthernet1/0/24
+D EX     10.107.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.110.0.0/16 
+           [170/25602816] via 10.76.242.1, 1w3d, GigabitEthernet1/0/24
+D EX     10.110.240.1/32 
+           [170/25602816] via 10.76.242.1, 1w3d, GigabitEthernet1/0/24
+D EX     10.110.250.0/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.248.250.0/25 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.248.250.128/25 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     10.252.252.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      30.0.0.0/29 is subnetted, 1 subnets
+D EX     30.20.57.120 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      144.140.0.0/16 is variably subnetted, 14 subnets, 3 masks
+D EX     144.140.162.40/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.162.48/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.162.80/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.181.80/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.201.1/32 
+           [170/25602816] via 10.76.242.1, 2d12h, GigabitEthernet1/0/24
+D EX     144.140.201.2/32 
+           [170/25602816] via 10.76.242.1, 2d12h, GigabitEthernet1/0/24
+D EX     144.140.201.3/32 
+           [170/25602816] via 10.76.242.1, 2d12h, GigabitEthernet1/0/24
+D EX     144.140.201.16/28 
+           [170/25602816] via 10.76.242.1, 2d12h, GigabitEthernet1/0/24
+D EX     144.140.208.16/29 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.208.32/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.208.80/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.218.96/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.222.32/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     144.140.224.32/28 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      146.195.0.0/16 is variably subnetted, 6 subnets, 4 masks
+D EX     146.195.21.0/29 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     146.195.30.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     146.195.31.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     146.195.39.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     146.195.180.0/22 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     146.195.255.20/32 
+           [170/2562816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      172.16.0.0/24 is subnetted, 1 subnets
+D EX     172.16.65.0 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      172.17.0.0/24 is subnetted, 1 subnets
+D EX     172.17.65.0 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      172.24.0.0/16 is variably subnetted, 6 subnets, 3 masks
+D EX     172.24.96.0/21 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     172.24.108.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     172.24.109.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     172.24.112.0/22 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     172.24.120.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     172.24.192.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      172.25.0.0/16 is variably subnetted, 2 subnets, 2 masks
+D EX     172.25.104.0/24 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+D EX     172.25.105.0/26 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      172.27.0.0/26 is subnetted, 1 subnets
+D EX     172.27.0.0 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      172.28.0.0/26 is subnetted, 1 subnets
+D EX     172.28.8.64 
+           [170/25602816] via 10.76.242.1, 4d20h, GigabitEthernet1/0/24
+      172.29.0.0/24 is subnetted, 1 subnets
+D EX     172.29.1.0 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      203.41.188.0/28 is subnetted, 1 subnets
+D EX     203.41.188.96 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      203.42.70.0/28 is subnetted, 1 subnets
+D EX     203.42.70.224 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      203.52.0.0/24 is variably subnetted, 2 subnets, 2 masks
+D EX     203.52.0.0/24 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     203.52.0.192/27 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      203.52.1.0/24 is variably subnetted, 2 subnets, 2 masks
+D EX     203.52.1.0/24 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+D EX     203.52.1.192/27 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+      203.52.2.0/28 is subnetted, 1 subnets
+D EX     203.52.2.160 
+           [170/25602816] via 10.76.242.1, 2w4d, GigabitEthernet1/0/24
+kalg-01-sw1#Show inv
+NAME: "1", DESCR: "WS-C3750G-24TS-1U"
+PID: WS-C3750G-24TS-E1U, VID: V03  , SN: FOC1407Y1UR
+
+
+kalg-01-sw1#

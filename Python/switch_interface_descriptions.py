@@ -5,6 +5,7 @@ import os.path
 import re
 import json
 import win32com.client
+import sqlite3
 
 
 # Try to import the faster cStringIO
@@ -196,6 +197,22 @@ class ShowCommandAnalyser:
         Total cdp entries displayed : 1
         NS1602
         """
+        # conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')     
+        cur = conn.cursor()
+        sql = """
+        CREATE TABLE IF NOT EXISTS cdp_neighbors (
+            id integer PRIMARY KEY,
+            hostname text,
+            remote_switch text,
+            local_ifce text,
+            holdtime text,
+            capability text,
+            remote_sw_type text,
+            remote_ifce text
+        );
+        """
+        cur.execute(sql)
+
         results = {}
         failures = []
 
@@ -252,6 +269,7 @@ class ShowCommandAnalyser:
                 remote_sw_type = m.group(5).strip()
                 remote_ifce = clean_up_ifce(m.group(6).strip())
 
+                print(self.hostName, remote_switch, local_ifce, holdtime, capability, remote_sw_type, remote_ifce, sep='|')
                 new_data.append([remote_switch,
                                  local_ifce,
                                  holdtime,
@@ -262,7 +280,8 @@ class ShowCommandAnalyser:
                 if self.hostName not in failures:
                     failures.append(self.hostName)
 
-        new_data = sorted(new_data, key=lambda x: (x[0], map(try_to_i, x[1].split('/'))))
+        # new_data = sorted(new_data, key=lambda x: (x[0], map(try_to_i, x[1].split('/'))))
+
 
         for remote_switch, local_ifce, _, _, remote_sw_type, remote_ifce in new_data:
 
@@ -275,7 +294,18 @@ class ShowCommandAnalyser:
             results[self.hostName][local_ifce]['remote_switch'] = remote_switch
             results[self.hostName][local_ifce]['remote_ifce'] = remote_ifce
             results[self.hostName][local_ifce]['remote_sw_type'] = remote_sw_type
-
+            
+            sql = """
+                INSERT INTO cdp_neighbors (hostname, remote_switch, local_ifce,
+                holdtime, capability, remote_sw_type, remote_ifce)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                """
+            ary = [self.hostName, remote_switch, local_ifce, holdtime, capability, remote_sw_type, remote_ifce]
+            cur.execute(sql, ary)
+            conn.commit()
+            
+            
+        # conn.close()
         return results
 
     @property
@@ -305,6 +335,23 @@ class ShowCommandAnalyser:
                 print(line, file=out)
         input_text = out.getvalue()
 
+        # conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')
+        cur = conn.cursor()
+        sql = """
+            CREATE TABLE IF NOT EXISTS mac_addresses (
+            id integer PRIMARY KEY,
+            hostname text,
+            ifce text,
+            vlan text,
+            mac_address text,
+            oui_vendor text,
+            UNIQUE(mac_address, oui_vendor)
+            )
+            """
+
+        cur.execute(sql)
+        conn.commit()
+        
         for line in input_text.splitlines():
 
             regex = re.compile(r'(?:^[\s*R]+)?'
@@ -328,6 +375,10 @@ class ShowCommandAnalyser:
                 mac_address = "".join(mac_address.split('.'))
                 _ = m.group(3)
                 ifce = m.group(4)
+                oui_vendor = ''
+                if mac_address[:6] in oui_mac_addresses:
+                    oui_vendor = oui_mac_addresses[mac_address[:6]]
+                oui_vendor = oui_vendor.upper()
 
                 if re.search(r'^(Gi|Te|Et|Fa)', ifce, re.IGNORECASE):
                     if self.hostName not in results:
@@ -338,10 +389,21 @@ class ShowCommandAnalyser:
 
                     results[self.hostName][ifce].append(mac_address)
                     results[self.hostName][ifce] = list(set(results[self.hostName][ifce]))
+
+
+                    ary = [self.hostName, ifce, vlan, mac_address, oui_vendor]
+                    sql = """
+                        INSERT OR IGNORE INTO mac_addresses (hostname, ifce, vlan, mac_address, oui_vendor)
+                        VALUES (?, ?, ?, ?, ?) 
+                        """
+                    cur.execute(sql, ary)
+                    conn.commit()
+
             else:
                 if self.hostName not in failures:
                     failures.append('{}: {}'.format(self.hostName, line))
 
+        # conn.close()
         return results
 
     @property
@@ -370,6 +432,19 @@ class ShowCommandAnalyser:
         ifce = ''
         description = ''
 
+        # conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')
+        cur = conn.cursor()
+        sql = """
+            CREATE TABLE IF NOT EXISTS ifce_descriptions (
+            id integer PRIMARY KEY,
+            hostname text,
+            ifce text,
+            description text
+            )
+            """
+        cur.execute(sql)
+        conn.commit()
+
         for entry in snippets:
             m = re.search(r'interface (?P<name>.*)', entry)
             if m:
@@ -392,6 +467,24 @@ class ShowCommandAnalyser:
             if ifce and ifce not in results[self.hostName]:
                 results[self.hostName][ifce] = description
 
+
+            m1 = re.search(r'^$', ifce)
+            m2 = re.search(r'loopback', ifce, re.IGNORECASE)
+            m3 = re.search(r'default', ifce, re.IGNORECASE)
+            m4 = re.search(r'port\-channel', ifce, re.IGNORECASE)
+
+            if ifce and len(ifce) > 0 and not m1 and not m2 and not m3 and not m4:
+                sql = """
+                    INSERT INTO ifce_descriptions (hostname, ifce, description)
+                    VALUES (?, ?, ?)
+                    """
+                ary = [self.hostName, ifce, description]
+
+                cur.execute(sql, ary)
+                conn.commit()
+
+
+        # conn.close()
         return results
 
     @property
@@ -429,6 +522,25 @@ class ShowCommandAnalyser:
                                r'((?:a-)?1?(?:0+|auto))\s+'
                                r'(.*)', (re.IGNORECASE | re.VERBOSE))
 
+            # conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')
+            cur = conn.cursor()
+            sql = """
+                CREATE TABLE IF NOT EXISTS ifce_status (
+                id integer PRIMARY KEY,
+                hostname text,
+                ifce text,
+                description text,
+                status text,
+                vlan text,
+                duplex text,
+                speed text,
+                type text
+                )
+                """
+
+            cur.execute(sql)
+            conn.commit()
+
             for line in snippet.splitlines():
                 m = regex.search(line)
                 if m:
@@ -442,6 +554,19 @@ class ShowCommandAnalyser:
                     type = m.group(7).strip()
 
                     headers = ['ifce_name', 'status', 'vlan', 'duplex', 'speed', 'type']
+
+
+                    m1 = re.search(r'^$', ifce)
+                    m2 = re.search(r'loopback', ifce, re.IGNORECASE)
+                    m3 = re.search(r'default', ifce, re.IGNORECASE)
+                    if ifce and len(ifce) > 0 and not m1 and not m2 and not m3:
+                        ary = [self.hostName, ifce, ifce_name, status, vlan, duplex, speed, type]
+                        sql = """
+                            INSERT INTO ifce_status (hostname, ifce, description, status, vlan, duplex, speed, type)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                            """
+                        cur.execute(sql, ary)
+                        conn.commit()
 
                     if self.hostName not in results:
                         results[self.hostName] = {}
@@ -458,6 +583,7 @@ class ShowCommandAnalyser:
                     if self.hostName not in failures:
                         failures.append(self.hostName)
 
+        # conn.close()
         return results
 
     @property
@@ -471,16 +597,39 @@ class ShowCommandAnalyser:
         regex = re.compile(r'(?<=Interface)(.*)(?={0:s})'.format(self.hostName), (re.DOTALL | re.IGNORECASE))
         m = regex.search(self.macToIPsString)
 
+        # conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')
+        cur = conn.cursor()
+        sql = """
+            CREATE TABLE IF NOT EXISTS macs_to_ips (
+            id integer PRIMARY KEY,
+            mac_addr,
+            ip_addr
+            )
+            """
+        cur.execute(sql)
+        conn.commit()
+
         snippet = ''
         if m:
             snippet = m.group(1)
 
             for line in snippet.splitlines():
                 if len(line.split()) == 6:
+
                     _, ip_addr, _, mac_addr, _, _ = line.split()
                     mac_addr = "".join(mac_addr.split('.'))
+
+                    sql = """
+                    INSERT INTO macs_to_ips (mac_addr, ip_addr)
+                    VALUES (?, ?)
+                    """
+                    ary = [mac_addr, ip_addr]
+                    cur.execute(sql, ary)
+                    conn.commit()
+
                     if mac_addr not in results:
                         results[mac_addr] = ip_addr
+        # conn.close()
         return results
 
     def updateValues(self):
@@ -654,22 +803,35 @@ if __name__ == '__main__':
     ###################################################################################
     # ROOT = r'C:\Users\Ricardo'  # TODO: modify this to suit in target machine
 
-    ROOT = r'.'  # TODO: modify this to suit in target machine
+    ROOT = r'C:\Users\rdapaz\Documents\projects\wp-fy17\Python'  # TODO: modify this to suit in target machine
     ##################################################################################
-
     rootdir = os.path.join(ROOT, 'ShowCommands')
 
-
-    with open(r'C:\Users\rdapaz\Documents\wp-fy17\Python\mac_addresses.json', 'r') as infile:
+    global oui_mac_addresses
+    with open(r'C:\Users\rdapaz\Documents\projects\wp-fy17\Python\mac_addresses.json', 'r') as infile:
         oui_mac_addresses = json.load(infile)
 
 
     # with open(os.path.join(rootdir, r'oui_mac_addresses.json'), 'r') as infile:
     #     oui_mac_addresses = json.load(infile)
+    global conn
+    conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')
+    cur = conn.cursor()
+
+    sql_ary = [
+    'DROP TABLE IF EXISTS cdp_neighbors',
+    'DROP TABLE IF EXISTS ifce_descriptions',
+    'DROP TABLE IF EXISTS ifce_status',
+    'DROP TABLE IF EXISTS mac_addresses',
+    'DROP TABLE IF EXISTS macs_to_ip',
+    ]
+    for sql in sql_ary:
+        cur.execute(sql)
+        conn.commit()
 
     for subdir, dirs, files in os.walk(rootdir):
         for my_file in files:
-            if re.search(r'txt$', my_file, re.IGNORECASE):
+            if re.search(r'(txt|log)$', my_file, re.IGNORECASE):
                 with open(os.path.join(subdir, my_file), 'r') as f:
                     run_text = f.read()
                     analyser = ShowCommandAnalyser(inputText=run_text, cdpData=cdpData, ifceDesData=ifceDesData,
@@ -678,6 +840,7 @@ if __name__ == '__main__':
 
                     cdpData, ifceDesData, ifceStatusData, macAddData, macToIPData = analyser.updateValues()
 
-    report = Reporter(cdpData=cdpData, ifceDesData=ifceDesData,
-                      ifceStatusData=ifceStatusData, ouiMACData=oui_mac_addresses,
-                      macAddrData=macAddData, macToIpData=macToIPData)
+    # report = Reporter(cdpData=cdpData, ifceDesData=ifceDesData,
+    #                   ifceStatusData=ifceStatusData, ouiMACData=oui_mac_addresses,
+    #                   macAddrData=macAddData, macToIpData=macToIPData)
+    conn.close()

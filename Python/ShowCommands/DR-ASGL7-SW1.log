@@ -1,0 +1,788 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.12.07 10:53:16 =~=~=~=~=~=~=~=~=~=~=~=
+
+DR-ASGL7-SW1#term
+DR-ASGL7-SW1#terminal le
+DR-ASGL7-SW1#terminal length 0
+DR-ASGL7-SW1#Show cdp nei
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone
+
+Device ID            Local Intrfce         Holdtme   Capability    Platform   Port ID
+sdc-L7partnerfw.westernpower.com
+                    Fas 0/5               137           R S I     891       Fas 8
+CIPCKYTEC03         Fas 0/39              144            H P      CommunicatEth 3
+DR-ASGL7-SW1#Show int status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa0/1     Contractor side    connected    1989       a-full  a-100 10/100BaseTX
+Fa0/2     Contractor side    connected    1989       a-full  a-100 10/100BaseTX
+Fa0/3     Contractor side    notconnect   1989         auto   auto 10/100BaseTX
+Fa0/4     Contractor side    connected    1989       a-full  a-100 10/100BaseTX
+Fa0/5     Contractor side sd connected    1989       a-full  a-100 10/100BaseTX
+Fa0/6     Contractor side Dr connected    1989       a-full  a-100 10/100BaseTX
+Fa0/7     Contractor side Dr connected    1989       a-full  a-100 10/100BaseTX
+Fa0/8     Contractor side    notconnect   1989         auto   auto 10/100BaseTX
+Fa0/9     Jumphost NIC1      connected    1990       a-full  a-100 10/100BaseTX
+Fa0/10    Jumphost NIC2      connected    1990       a-full  a-100 10/100BaseTX
+Fa0/11    DRPFWa NIC 4       connected    1991       a-full  a-100 10/100BaseTX
+Fa0/12    Jumphost NIC       disabled     420          auto   auto 10/100BaseTX
+Fa0/13    DRPFWb NIC 4       connected    1991       a-full  a-100 10/100BaseTX
+Fa0/14    Jumphost NIC       disabled     420          auto   auto 10/100BaseTX
+Fa0/15    Jumphost NIC       disabled     420          auto   auto 10/100BaseTX
+Fa0/16    Jumphost NIC       disabled     420          auto   auto 10/100BaseTX
+Fa0/17                       disabled     10           auto   auto 10/100BaseTX
+Fa0/18                       disabled     10           auto   auto 10/100BaseTX
+Fa0/19                       disabled     10           auto   auto 10/100BaseTX
+Fa0/20                       disabled     10           auto   auto 10/100BaseTX
+Fa0/21                       disabled     10           auto   auto 10/100BaseTX
+Fa0/22                       disabled     10           auto   auto 10/100BaseTX
+Fa0/23                       disabled     10           auto   auto 10/100BaseTX
+Fa0/24                       disabled     10           auto   auto 10/100BaseTX
+Fa0/25                       disabled     10           auto   auto 10/100BaseTX
+Fa0/26                       disabled     10           auto   auto 10/100BaseTX
+Fa0/27                       disabled     10           auto   auto 10/100BaseTX
+Fa0/28                       disabled     10           auto   auto 10/100BaseTX
+Fa0/29                       disabled     10           auto   auto 10/100BaseTX
+Fa0/30                       disabled     10           auto   auto 10/100BaseTX
+Fa0/31                       disabled     10           auto   auto 10/100BaseTX
+Fa0/32                       disabled     10           auto   auto 10/100BaseTX
+Fa0/33                       disabled     10           auto   auto 10/100BaseTX
+Fa0/34                       disabled     10           auto   auto 10/100BaseTX
+Fa0/35                       notconnect   1990         auto   auto 10/100BaseTX
+Fa0/36                       notconnect   1990         auto   auto 10/100BaseTX
+Fa0/37    Empired-Server_iLo connected    1991       a-full  a-100 10/100BaseTX
+Fa0/38    Empired_Server_NIC connected    1991       a-full  a-100 10/100BaseTX
+Fa0/39    Empired_Server_NIC connected    1991       a-full  a-100 10/100BaseTX
+Fa0/40    Empired_FW         connected    1991       a-full  a-100 10/100BaseTX
+Fa0/41    jumphost side      notconnect   1991         auto   auto 10/100BaseTX
+Fa0/42    jumphost side      notconnect   1991         auto   auto 10/100BaseTX
+Fa0/43    jumphost side      notconnect   1991         auto   auto 10/100BaseTX
+Fa0/44    jumphost side      notconnect   1991         auto   auto 10/100BaseTX
+Fa0/45    jumphost side      notconnect   1990         auto   auto 10/100BaseTX
+Fa0/46    jumphost side      notconnect   1990         auto   auto 10/100BaseTX
+Fa0/47    jumphost side      connected    1990       a-full  a-100 10/100BaseTX
+Fa0/48    jumphost side      connected    1990       a-full  a-100 10/100BaseTX
+Gi0/1                        disabled     1            auto   auto 10/100/1000BaseTX
+Gi0/2                        disabled     1            auto   auto 10/100/1000BaseTX
+Po6                          connected    1991       a-full  a-100 
+DR-ASGL7-SW1#Show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.21.252.252           0   f04d.a206.1ded  ARPA   Vlan1990
+Internet  10.21.252.196           -   0014.a95f.6741  ARPA   Vlan1990
+Internet  10.21.252.203          15   0010.dbff.2090  ARPA   Vlan1990
+DR-ASGL7-SW1#Show mac add
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+1989    0010.dbff.2080    DYNAMIC     Fa0/1
+1989    f866.f2c4.cc19    DYNAMIC     Fa0/4
+1990    0010.dbff.2090    DYNAMIC     Fa0/47
+1990    f04d.a206.1ded    DYNAMIC     Fa0/9
+1991    0010.dbff.20c0    DYNAMIC     Fa0/11
+1991    0015.5d36.9500    DYNAMIC     Po6
+1991    0015.5d36.9501    DYNAMIC     Po6
+1991    001c.7f2b.37e4    DYNAMIC     Fa0/40
+1991    9cb6.5479.5a48    DYNAMIC     Po6
+1991    9cb6.5479.5a49    DYNAMIC     Po6
+1991    9cb6.5479.5a4a    DYNAMIC     Fa0/37
+Total Mac Addresses for this criterion: 31
+DR-ASGL7-SW1#Show int | inc (rops|otoc)
+Vlan1 is administratively down, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+Vlan1990 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/1 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/2 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/3 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/4 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/5 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/6 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/7 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/8 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/9 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/10 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/11 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/12 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/13 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/14 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/15 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/16 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/17 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/18 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/19 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/20 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/21 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/22 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/23 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/24 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/25 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/26 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/27 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/28 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/29 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/30 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/31 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/32 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/33 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/34 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/35 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/36 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/37 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/38 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/39 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/40 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/41 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/42 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/43 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/44 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/45 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/46 is down, line protocol is down (notconnect)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/47 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+FastEthernet0/48 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+GigabitEthernet0/1 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+GigabitEthernet0/2 is administratively down, line protocol is down (disabled)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+Port-channel6 is up, line protocol is up (connected)
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+Loopback0 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+DR-ASGL7-SW1#Show run
+Building configuration...
+
+Current configuration : 12360 bytes
+!
+! Last configuration change at 10:39:10 WST Fri Nov 17 2017 by svc-empireddiscovery
+! NVRAM config last updated at 10:39:09 WST Fri Nov 17 2017 by svc-empireddiscovery
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+!
+hostname DR-ASGL7-SW1
+!
+logging buffered 64000 debugging
+no logging console
+enable secret 5 $1$1BLp$T.oliSqcNRSVpbzOQiMCg0
+!
+username westernpower privilege 15 secret 5 $1$oE6Z$W6JBsD/s1zG90SrZzsT9b.
+aaa new-model
+aaa authentication banner ^C
+ ********************************************************************
+ *             Please enter your username and password.             *
+ ********************************************************************
+
+ ^C
+aaa authentication fail-message ^C
+ ********************************************************************
+ *      The supplied Username and/or Password is not valid.         *
+ *  This failed login attempt has been recorded for audit purposes. *
+ ********************************************************************
+^C
+aaa authentication login default group radius local
+aaa authentication enable default enable
+aaa accounting exec default start-stop group radius
+!
+aaa session-id common
+clock timezone WST 8
+vtp domain AsgL7-Jumphost
+vtp mode transparent
+ip subnet-zero
+!
+ip domain-name ads.westernpower.com.au
+login on-failure log
+login on-success log
+!
+!
+!
+no file verify auto
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 1989
+ name contractor_firewall
+!
+vlan 1990
+ name contractor_jumphost
+!
+vlan 1991
+ name Empired
+!
+interface Loopback0
+ no ip address
+ no ip route-cache
+!
+interface Port-channel6
+ switchport access vlan 1991
+ switchport mode access
+!
+interface FastEthernet0/1
+ description Contractor side
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ description Contractor side
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/3
+ description Contractor side
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/4
+ description Contractor side
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/5
+ description Contractor side sdc-L7partnerfw f8
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ description Contractor side Dr-pfw01a s1/2
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ description Contractor side Dr-pfw01b s1/2
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/8
+ description Contractor side
+ switchport access vlan 1989
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/9
+ description Jumphost NIC1
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/10
+ description Jumphost NIC2
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/11
+ description DRPFWa NIC 4
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/12
+ description Jumphost NIC
+ switchport access vlan 420
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/13
+ description DRPFWb NIC 4
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/14
+ description Jumphost NIC
+ switchport access vlan 420
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/15
+ description Jumphost NIC
+ switchport access vlan 420
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/16
+ description Jumphost NIC
+ switchport access vlan 420
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/17
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/18
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/19
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/20
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/21
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/22
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/23
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/24
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/25
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/26
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/27
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/28
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/29
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/30
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/31
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/32
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/33
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/34
+ switchport access vlan 10
+ switchport mode access
+ shutdown
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/35
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/36
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/37
+ description Empired-Server_iLo
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/38
+ description Empired_Server_NIC1
+ switchport access vlan 1991
+ switchport mode access
+ channel-group 6 mode active
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/39
+ description Empired_Server_NIC2
+ switchport access vlan 1991
+ switchport mode access
+ channel-group 6 mode active
+ spanning-tree portfast
+!
+interface FastEthernet0/40
+ description Empired_FW
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/41
+ description jumphost side
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/42
+ description jumphost side
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/43
+ description jumphost side
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/44
+ description jumphost side
+ switchport access vlan 1991
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/45
+ description jumphost side
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/46
+ description jumphost side
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/47
+ description jumphost side
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/48
+ description jumphost side
+ switchport access vlan 1990
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/1
+ shutdown
+!
+interface GigabitEthernet0/2
+ shutdown
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan1990
+ ip address 10.21.252.196 255.255.255.192
+ no ip route-cache
+!
+ip default-gateway 10.21.252.203
+no ip http server
+!
+ip access-list standard NSG_TELNET
+ permit 10.19.60.0 0.0.0.255
+ permit 146.195.135.0 0.0.0.127
+ permit 146.195.0.20 0.0.255.3
+ permit 10.19.7.62 0.0.0.1
+ deny   any log
+ip access-list standard NSG_TELNET_SSH
+ remark --- Empired Management Subnet ---
+ permit 172.30.160.0 0.0.0.15
+ remark --- Deny Anything Else ---
+ deny   any log
+ip access-list standard RO_SNMP
+ remark --- Solarwinds Syslog Server ---
+ permit 10.19.7.46
+ remark --- Empired Management Subnet ---
+ permit 172.30.160.0 0.0.0.255
+ remark --- IT Subnet on Lvl2E ---
+ permit 10.19.60.0 0.0.0.255
+ deny   any
+ip access-list standard RW_SNMP
+ remark ---allow NNMi---
+ permit 172.30.160.10
+ deny   any
+ip radius source-interface Vlan1990 
+logging trap debugging
+logging 146.195.135.81
+logging 172.30.160.10
+logging 172.30.161.10
+snmp-server community eb6cIzuB RO RO_SNMP
+snmp-server community Sp7ZyvwQ RW RW_SNMP
+snmp-server ifindex persist
+snmp-server location HOCR ASGL7Zone
+snmp-server contact Network Systems x5444
+snmp-server enable traps snmp authentication coldstart warmstart
+snmp-server enable traps cluster
+snmp-server enable traps rtr
+snmp-server enable traps vtp
+snmp-server enable traps port-security
+snmp-server enable traps config
+snmp-server enable traps stpx root-inconsistency loop-inconsistency
+snmp-server host 146.195.135.50 eb6cIzuB 
+radius-server host 10.19.1.113 auth-port 1645 acct-port 1646
+radius-server host 10.21.0.24 auth-port 1645 acct-port 1646
+radius-server source-ports 1645-1646
+radius-server key 7 0976792F5809452C27260B1E15013B1D640916012E0458004D537659590E3B434C6B7846637656045E13366A5A2B1D245D49222B2936627B372A2101362B4A4278
+!
+control-plane
+!
+banner motd ^CCC
+
+************************************************************************
+************************************************************************
+                               WARNING
+
+Access to this system is for authorised users and for authorised
+purposes only.
+
+Unauthorised users maybe subject to prosecution under the Crimes
+Act or state legislation.
+
+This switch is administered by Network Systems.
+
+Contact the Help Desk on x5444 or Operations on x6547.
+************************************************************************
+************************************************************************
+
+^C
+!
+line con 0
+ exec-timeout 15 0
+ logging synchronous
+ login authentication console
+line vty 0 4
+ exec-timeout 15 0
+ transport input telnet
+ transport output telnet
+line vty 5 15
+ access-class NSG_TELNET in
+ exec-timeout 15 0
+ transport input telnet
+ transport output telnet
+!
+ntp clock-period 36028649
+ntp source Vlan1
+ntp server 146.195.128.175
+!
+end
+
+DR-ASGL7-SW1#Show ver
+Cisco IOS Software, C2960 Software (C2960-LANBASE-M), Version 12.2(25)FX, RELEASE SOFTWARE (fc1)
+Copyright (c) 1986-2005 by Cisco Systems, Inc.
+Compiled Wed 12-Oct-05 22:05 by yenanh
+
+ROM: Bootstrap program is C2960 boot loader
+BOOTLDR: C2960 Boot Loader (C2960-HBOOT-M) Version 12.2(25r)FX, RELEASE SOFTWARE (fc4)
+
+ DR-ASGL7-SW1 uptime is 5 years, 35 weeks, 2 days, 23 hours, 27 minutes
+System returned to ROM by power-on
+System restarted at 11:36:41 WST Wed Apr 4 2012
+System image file is "flash:c2960-lanbase-mz.122-25.FX/c2960-lanbase-mz.122-25.FX.bin"
+
+cisco WS-C2960-48TT-L (PowerPC405) processor (revision B0) with 61440K/4088K bytes of memory.
+Processor board ID FOC1004X0S5
+Last reset from power-on
+2 Virtual Ethernet interfaces
+48 FastEthernet interfaces
+2 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+64K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : 00:14:A9:5F:67:00
+Motherboard assembly number     : 73-10391-03
+Power supply part number        : 341-0097-02
+Motherboard serial number       : FOC100335KH
+Power supply serial number      : DCA095029Y2
+Model revision number           : B0
+Motherboard revision number     : A0
+Model number                    : WS-C2960-48TT-L
+System serial number            : FOC1004X0S5
+Top Assembly Part Number        : 800-27222-02
+Top Assembly Revision Number    : A0
+Version ID                      : V02
+CLEI Code Number                : COM3H00BRA
+Hardware Board Revision Number  : 0x02
+
+
+Switch   Ports  Model              SW Version              SW Image            
+------   -----  -----              ----------              ----------          
+*    1   50     WS-C2960-48TT-L    12.2(25)FX              C2960-LANBASE-M     
+
+
+Configuration register is 0xF
+
+DR-ASGL7-SW1#Show inv
+NAME: "1", DESCR: "WS-C2960-48TT-L"
+PID: WS-C2960-48TT-L   , VID: V02, SN: FOC1004X0S5
+
+
+DR-ASGL7-SW1#
