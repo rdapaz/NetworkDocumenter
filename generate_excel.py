@@ -57,8 +57,11 @@ class Excel:
         self.sh.Activate
         for col, val in enumerate(headings):
             self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Value2 = val
+            self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Style = 'Accent3'
         
         self.sh.Range(f'A2:{columnNames[-1]}{len(data)+1}').Value2 = data
+        self.sh.Range(f'A2:{columnNames[-1]}{len(data)+1}').Style = 'Output'
+        self.sh.Range(f'A2:{columnNames[-1]}{len(data)+1}').EntireColumn.AutoFit()
 
         if self.firstSheet:
             self.firstSheet = False
