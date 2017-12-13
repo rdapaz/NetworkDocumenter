@@ -1,9 +1,6 @@
-
-Western Power FY17 Tools
+Cisco Network Tools
 ------------------------
 
-This is a test of how well it all works:
- * This is one bulet point
- * This is another bullet point
- * this is another
- * This is yet another
+Generate Excel file documenting the network from running a few commands
+and saving the output to putty.
+
