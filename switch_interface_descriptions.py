@@ -493,4 +493,92 @@ if __name__ == '__main__':
                     analyser = ShowCommandAnalyser(run_text)
                     analyser.analyse()
 
+
+    sql = """
+        CREATE VIEW IF NOT EXISTS v_ifce_status AS
+        SELECT
+            ifce_status.hostname,
+            ifce_status.ifce,
+            ifce_descriptions.description,
+            ifce_status.status,
+            ifce_status.vlan,
+            ifce_status.duplex,
+            ifce_status.type,
+            ifce_status.speed
+        FROM
+            ifce_status INNER JOIN ifce_descriptions ON
+            (ifce_status.hostname = ifce_descriptions.hostname AND 
+            ifce_status.ifce = ifce_descriptions.ifce)
+    """
+    cur.execute(sql)
+    conn.commit()
+    
+    sql = """
+    CREATE VIEW IF NOT EXISTS v_unique_macs AS
+    SELECT
+        mac_addresses.hostname,
+        mac_addresses.ifce,
+        mac_addresses.mac_address,
+        mac_addresses.oui_vendor
+    FROM
+        mac_addresses 
+    GROUP BY
+        1,
+        2 
+    HAVING
+        count( mac_addresses.mac_address ) = 1
+    """
+    cur.execute(sql)
+    conn.commit()
+
+    sql = """
+    CREATE VIEW IF NOT EXISTS v_ifce_status_mac AS
+    SELECT
+        v_ifce_status.hostname AS hostname,
+        v_ifce_status.ifce AS ifce,
+        v_ifce_status.description AS description,
+        v_ifce_status.status AS status,
+        v_ifce_status.duplex AS duplex,
+        v_ifce_status.vlan AS vlan,
+        v_ifce_status.speed AS speed,
+        v_ifce_status.type AS type,
+        v_unique_macs.mac_address AS mac,
+        v_unique_macs.oui_vendor AS oui_vendor
+    FROM
+        v_ifce_status
+    LEFT OUTER JOIN v_unique_macs ON 
+    v_ifce_status.hostname = v_unique_macs.hostname AND 
+        v_ifce_status.ifce = v_unique_macs.ifce
+    """
+    cur.execute(sql)
+    conn.commit()
+
+    sql = """
+    
+    CREATE VIEW IF NOT EXISTS v_full_monty AS
+    SELECT DISTINCT
+        v_ifce_status_mac.hostname,
+        v_ifce_status_mac.ifce,
+        v_ifce_status_mac.description,
+        v_ifce_status_mac.status,
+        v_ifce_status_mac.duplex,
+        v_ifce_status_mac.vlan,
+        v_ifce_status_mac.speed,
+        v_ifce_status_mac.type,
+        v_ifce_status_mac.mac,
+        macs_to_ips.ip_addr,
+        cdp_neighbors.remote_switch,
+        cdp_neighbors.remote_ifce,
+        cdp_neighbors.remote_sw_type
+    FROM
+        v_ifce_status_mac
+    LEFT OUTER JOIN macs_to_ips ON
+        v_ifce_status_mac.mac = macs_to_ips.mac_addr
+    LEFT OUTER JOIN cdp_neighbors ON
+        v_ifce_status_mac.hostname = cdp_neighbors.hostname AND
+            v_ifce_status_mac.ifce = cdp_neighbors.local_ifce
+    """
+    cur.execute(sql)
+    conn.commit()   
+    
     conn.close()

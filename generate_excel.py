@@ -1,6 +1,8 @@
 import win32com.client
 import sqlite3
 import pprint
+import sys
+import os
 
 
 def pretty_print(o):
@@ -59,9 +61,9 @@ class Excel:
             self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Value2 = val
             self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Style = 'Accent3'
         
-        self.sh.Range(f'A2:{columnNames[-1]}{len(data)+1}').Value2 = data
-        self.sh.Range(f'A2:{columnNames[-1]}{len(data)+1}').Style = 'Output'
-        self.sh.Range(f'A2:{columnNames[-1]}{len(data)+1}').EntireColumn.AutoFit()
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).Value2 = data
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).Style = 'Output'
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).EntireColumn.AutoFit()
 
         if self.firstSheet:
             self.firstSheet = False
@@ -71,7 +73,10 @@ class Excel:
 def main():
 
     xl = Excel()
-    conn = sqlite3.connect(r'C:\Users\rdapaz\Desktop\pynetcco.sqlite3')
+    current_path = os.path.dirname(sys.argv[0])
+    os.chdir(current_path)
+    ROOT = r'.' 
+    conn = sqlite3.connect(os.path.join(ROOT, 'pynetcco.sqlite3'))
     cur = conn.cursor()
 
     sql = """
