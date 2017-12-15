@@ -17,6 +17,7 @@ class Excel:
         self.wk = self.xlApp.Workbooks.Add()
         self.firstSheet = True
         self.lastEntry = ''
+        self.hostnames = []
 
     def column_name(self, iVal):
         retVal = None
@@ -31,7 +32,7 @@ class Excel:
             retVal = f'{value_colName(m)}{value_colName(n)}' 
         return retVal
 
-    def generate_sheet(self, hostname, data):
+    def generate_sheets(self, hostname, data):
         
         headings = [
                     'Switch', 
@@ -45,7 +46,7 @@ class Excel:
                     'MAC',
                     'OUI Vendor',
                     'IP Address',
-                    'Alt Desc'
+                    'Alt Desc (CDP Neighbors)'
                     ]
 
         columnNames = [self.column_name(x+1) for x in range(len(headings))]
@@ -56,6 +57,7 @@ class Excel:
             self.sh = self.wk.Worksheets.Add(After=self.wk.Worksheets(self.lastEntry))
 
         self.sh.Name = hostname
+        self.hostnames.append(hostname)
         self.sh.Activate
         for col, val in enumerate(headings):
             self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Value2 = val
@@ -69,6 +71,27 @@ class Excel:
             self.firstSheet = False
 
         self.lastEntry = hostname
+
+    def generate_summary_sheet(self):
+        self.sh = self.wk.Worksheets.Add(After=self.wk.Worksheets(self.lastEntry))
+        self.sh.Name = 'Summary'
+        
+        headings = [
+            'Switch', 
+            ]
+
+        columnNames = [self.column_name(x+1) for x in range(len(headings))]
+
+        for col, val in enumerate(headings):
+            self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Value2 = val
+            self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Style = 'Accent3'
+
+        data = [[x] for x in self.hostnames]
+
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).Value2 = data
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).Style = 'Output'
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).EntireColumn.AutoFit()
+
 
 def main():
 
@@ -131,8 +154,9 @@ def main():
                 alt_desc = f"{remote_switch} {remote_ifce} ({remote_sw_type})"
             arr.append([hostname, ifce, description, status, vlan, duplex, speed, _type, mac, oui_vendor, ip_addr, alt_desc])
 
-        xl.generate_sheet(hostname, arr)
+        xl.generate_sheets(hostname, arr)
 
+    xl.generate_summary_sheet()
     cur.close()
     conn.close()
 
