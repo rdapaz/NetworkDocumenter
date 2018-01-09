@@ -1,0 +1,1823 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2017.12.22 11:10:08 =~=~=~=~=~=~=~=~=~=~=~=
+login as: n039941
+
+ ********************************************************************
+ * [WARNING]                                                        *
+ *                                                                  *
+ * This system belongs to a private organisation. If you are not    *
+ * authorised to access this system, exit immediately.              *
+ * Unauthorised access to this system is forbidden by company       *
+ * policies, national, and international laws.                      *
+ * Unauthorised users are subject to criminal and civil penalties   *
+ * as well as company initiated disciplinary proceedings.           *
+ * By entry into this system you acknowledge that you are           *
+ * authorised access and the level of privilege you subsequently    *
+ * execute on this system. You further acknowledge that by entry    *
+ * into this system you expect no privacy from monitoring.          *
+ *                                                                  *
+ *        ALL ACCESS TO THIS SYSTEM IS MONITORED AND LOGGED         *
+ *                                                                  *
+ ********************************************************************
+Using keyboard-interactive authentication.
+Password: 
+
+ ********************************************************************
+ * You are now logged into: WP                                      *
+ * All activity is being logged for review by System Administrators *
+ ********************************************************************
+
+busn-01-sw1>en
+Password: 
+busn-01-sw1#term len 0
+busn-01-sw1#Show cdp nei
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+busn-02-sw1.ads.westernpower.com.au
+                 Gig 1/0/1         131             R S I  WS-C3750V Gig 1/0/1
+SEP04C5A4B03561  Fas 1/0/28        134             H P M  IP Phone  Port 1
+SEP0021A0874387  Fas 1/0/5         149             H P M  IP Phone  Port 1
+SEP00254595696A  Fas 1/0/8         131             H P M  IP Phone  Port 1
+SEP0024C4FD3255  Fas 1/0/34        144             H P M  IP Phone  Port 1
+SEP04C5A4B030EA  Fas 1/0/1         124             H P M  IP Phone  Port 1
+SEP0024C4FD3376  Fas 1/0/24        131             H P M  IP Phone  Port 1
+SEP0024C4FD32CA  Fas 1/0/23        125             H P M  IP Phone  Port 1
+SEP0025459576D3  Fas 1/0/18        140             H P M  IP Phone  Port 1
+SEP002545956CEF  Fas 1/0/14        142             H P M  IP Phone  Port 1
+SEP44ADD9D5D4F9  Fas 1/0/25        154             H P M  IP Phone  Port 1
+SEP0024C4FD31D3  Fas 1/0/2         130             H P M  IP Phone  Port 1
+SEP04C5A4B0471F  Fas 1/0/11        120             H P M  IP Phone  Port 1
+SEP002545955F1F  Fas 1/0/6         134             H P M  IP Phone  Port 1
+SEP0025459560BC  Fas 1/0/7         158             H P M  IP Phone  Port 1
+SEP0024C4FD32F9  Fas 1/0/35        159             H P M  IP Phone  Port 1
+SEP002545957A5C  Fas 1/0/39        172             H P M  IP Phone  Port 1
+ITT11855         Fas 1/0/15        163               H    MSI on Wi Local Area Connection
+ITT04048         Fas 1/0/15        160               H    MSI on Wi Local Area Connection
+ITT06418         Fas 1/0/20        179               H    MSI on Wi Local Area Connection 3
+ITT06804         Fas 1/0/10        124               H    MSI on Wi Local Area Connection 2
+ITT06696         Fas 1/0/12        127               H    MSI on Wi Local Area Connection 3
+ITT06766         Fas 1/0/12        128               H    MSI on Wi Local Area Connection 3
+BUSN-01-R1.ads.westernpower.com.au
+                 Fas 1/0/48        156             R S I  ISR4331/K Gig 0/0/0
+ITT14243         Fas 1/0/37        131               H    MSI on Wi Local Area Connection
+ITT06701         Fas 1/0/26        126               H    MSI on Wi Local Area Connection 2
+ITT06773         Fas 1/0/30        130               H    MSI on Wi Local Area Connection 3
+busn-01-sw1#Show int status
+
+Port      Name               Status       Vlan       Duplex  Speed Type
+Fa1/0/1                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/2                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/3                      notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/4                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/5                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/6                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/7                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/8                      connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/9   "Suspected Faulty  disabled     401          auto   auto 10/100BaseTX
+Fa1/0/10                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/11                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/12                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/13                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/14                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/15                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/16                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/17                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/18                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/19                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/20                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/21                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/22                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/23                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/24                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/25                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/26                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/27                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/28                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/29                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/30                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/31                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/32  STEELHEAD_MANAGEME connected    399        a-full  a-100 10/100BaseTX
+Fa1/0/33                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/34                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/35                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/36                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/37                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/38                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/39                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/40                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/41                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/42  CCTV SYSTEM        notconnect   902          auto   auto 10/100BaseTX
+Fa1/0/43  CCTV LAPTOP        notconnect   902          auto   auto 10/100BaseTX
+Fa1/0/44                     connected    401        a-full  a-100 10/100BaseTX
+Fa1/0/45                     notconnect   401          auto   auto 10/100BaseTX
+Fa1/0/46  CARDAX SECURITY    connected    480        a-full  a-100 10/100BaseTX
+Fa1/0/47  busn-UPS           connected    901        a-full  a-100 10/100BaseTX
+Fa1/0/48  busn-01-rb1        connected    routed     a-full  a-100 10/100BaseTX
+Gi1/0/1   busn-02-sw1 gi1/0/ connected    routed     a-full a-1000 1000BaseSX SFP
+Gi1/0/2                      notconnect   1            auto   auto Not Present
+Gi1/0/3                      notconnect   1            auto   auto Not Present
+Gi1/0/4                      notconnect   1            auto   auto Not Present
+busn-01-sw1#Show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.81.24.1              -   a418.757e.f1cb  ARPA   Vlan999
+Internet  10.81.64.1              -   a418.757e.f1c4  ARPA   Vlan401
+Internet  10.81.64.11             1   001b.d3e1.06ec  ARPA   Vlan401
+Internet  10.81.64.12             0   0010.c6b0.e271  ARPA   Vlan401
+Internet  10.81.64.13             0   4437.e688.cd01  ARPA   Vlan401
+Internet  10.81.64.14             0   001b.d3e1.0c1f  ARPA   Vlan401
+Internet  10.81.64.15           124   001b.d3e1.a113  ARPA   Vlan401
+Internet  10.81.64.18             0   001b.d3e1.06eb  ARPA   Vlan401
+Internet  10.81.64.19             0   0024.7e0b.9867  ARPA   Vlan401
+Internet  10.81.64.20             1   70f3.9505.d44b  ARPA   Vlan401
+Internet  10.81.64.23             0   001b.d3e1.b255  ARPA   Vlan401
+Internet  10.81.64.24             2   001b.d3e1.0317  ARPA   Vlan401
+Internet  10.81.64.25            13   90ac.3f00.2388  ARPA   Vlan401
+Internet  10.81.64.26             0   90ac.3f00.2937  ARPA   Vlan401
+Internet  10.81.64.27           136   6c0b.843d.2f45  ARPA   Vlan401
+Internet  10.81.64.30             0   Incomplete      ARPA   
+Internet  10.81.64.31           129   0800.37b1.b34a  ARPA   Vlan401
+Internet  10.81.64.32            36   bc83.85f7.22a0  ARPA   Vlan401
+Internet  10.81.64.34            60   0800.37b1.a4ae  ARPA   Vlan401
+Internet  10.81.64.35            18   0024.9b0e.eef6  ARPA   Vlan401
+Internet  10.81.64.36             3   c033.5eca.9b6d  ARPA   Vlan401
+Internet  10.81.64.37           176   0800.37b1.b336  ARPA   Vlan401
+Internet  10.81.64.38            18   0800.37b1.b347  ARPA   Vlan401
+Internet  10.81.64.41             2   fc4d.d4d2.18c0  ARPA   Vlan401
+Internet  10.81.64.145            1   f0de.f17e.d56a  ARPA   Vlan401
+Internet  10.81.64.146            1   001b.d3e1.d0b4  ARPA   Vlan401
+Internet  10.81.64.147            0   001b.d3e1.06ea  ARPA   Vlan401
+Internet  10.81.64.148            2   c033.5ec9.c0cf  ARPA   Vlan401
+Internet  10.81.64.150            0   6c0b.8423.f89c  ARPA   Vlan401
+Internet  10.81.64.151           90   001b.d3e2.eea9  ARPA   Vlan401
+Internet  10.81.64.152            0   001b.d3e1.a110  ARPA   Vlan401
+Internet  10.81.64.153           96   001b.d3e1.a111  ARPA   Vlan401
+Internet  10.81.64.154            0   4ccc.6a1b.0e79  ARPA   Vlan401
+Internet  10.81.96.1              -   a418.757e.f1c8  ARPA   Vlan801
+Internet  10.81.128.1             -   a418.757e.f1c6  ARPA   Vlan501
+Internet  10.81.128.30           35   0025.4595.7a5c  ARPA   Vlan501
+Internet  10.81.128.31           21   0024.c4fd.32f9  ARPA   Vlan501
+Internet  10.81.128.32           24   0024.c4fd.3255  ARPA   Vlan501
+Internet  10.81.128.33           21   0025.4595.5f1f  ARPA   Vlan501
+Internet  10.81.128.34           18   0024.c4fd.31d3  ARPA   Vlan501
+Internet  10.81.128.35           15   44ad.d9d5.d4f9  ARPA   Vlan501
+Internet  10.81.128.36           12   0025.4595.696a  ARPA   Vlan501
+Internet  10.81.128.37           22   0024.c4fd.3376  ARPA   Vlan501
+Internet  10.81.128.38           21   0025.4595.60bc  ARPA   Vlan501
+Internet  10.81.128.39           20   0025.4595.76d3  ARPA   Vlan501
+Internet  10.81.128.40           23   0021.a087.4387  ARPA   Vlan501
+Internet  10.81.128.41           14   04c5.a4b0.3561  ARPA   Vlan501
+Internet  10.81.128.43           19   0025.4595.6cef  ARPA   Vlan501
+Internet  10.81.128.44           12   04c5.a4b0.471f  ARPA   Vlan501
+Internet  10.81.128.45           15   04c5.a4b0.30ea  ARPA   Vlan501
+Internet  10.81.128.46            0   0024.c4fd.32ca  ARPA   Vlan501
+Internet  10.81.200.193           -   a418.757e.f1ca  ARPA   Vlan902
+Internet  10.81.224.1             -   a418.757e.f1c5  ARPA   Vlan480
+Internet  10.81.224.10            0   001c.7f22.2296  ARPA   Vlan480
+Internet  10.81.241.1             -   a418.757e.f1c3  ARPA   Vlan399
+Internet  10.81.241.5           154   000e.b64c.f248  ARPA   Vlan399
+Internet  10.81.242.1           174   00f8.2cee.8a60  ARPA   FastEthernet1/0/48
+Internet  10.81.242.2             -   a418.757e.f1c1  ARPA   FastEthernet1/0/48
+Internet  10.81.242.25            -   a418.757e.f1c2  ARPA   GigabitEthernet1/0/1
+Internet  10.81.242.26           64   0c27.2423.5d41  ARPA   GigabitEthernet1/0/1
+Internet  10.81.246.1             -   a418.757e.f1c7  ARPA   Vlan800
+Internet  10.81.254.1             -   a418.757e.f1c9  ARPA   Vlan901
+Internet  10.81.254.4           153   0020.85fd.9b17  ARPA   Vlan901
+busn-01-sw1#Show mac add
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 401    0010.c6b0.e271    DYNAMIC     Fa1/0/15
+ 401    001b.d3e1.0317    DYNAMIC     Fa1/0/31
+ 401    001b.d3e1.06ea    DYNAMIC     Fa1/0/30
+ 401    001b.d3e1.06eb    DYNAMIC     Fa1/0/10
+ 401    001b.d3e1.06ec    DYNAMIC     Fa1/0/19
+ 401    001b.d3e1.0c1f    DYNAMIC     Fa1/0/26
+ 401    001b.d3e1.a110    DYNAMIC     Fa1/0/12
+ 401    001b.d3e1.b255    DYNAMIC     Fa1/0/12
+ 401    001b.d3e1.d0b4    DYNAMIC     Fa1/0/20
+ 401    0021.a087.4387    DYNAMIC     Fa1/0/5
+ 401    0024.7e0b.9867    DYNAMIC     Fa1/0/15
+ 401    0024.c4fd.31d3    DYNAMIC     Fa1/0/2
+ 401    0024.c4fd.3255    DYNAMIC     Fa1/0/34
+ 401    0024.c4fd.32ca    DYNAMIC     Fa1/0/23
+ 401    0024.c4fd.32f9    DYNAMIC     Fa1/0/35
+ 401    0024.c4fd.3376    DYNAMIC     Fa1/0/24
+ 401    0025.4595.5f1f    DYNAMIC     Fa1/0/6
+ 401    0025.4595.60bc    DYNAMIC     Fa1/0/7
+ 401    0025.4595.696a    DYNAMIC     Fa1/0/8
+ 401    0025.4595.6cef    DYNAMIC     Fa1/0/14
+ 401    0025.4595.76d3    DYNAMIC     Fa1/0/18
+ 401    0025.4595.7a5c    DYNAMIC     Fa1/0/39
+ 401    04c5.a4b0.30ea    DYNAMIC     Fa1/0/1
+ 401    04c5.a4b0.3561    DYNAMIC     Fa1/0/28
+ 401    04c5.a4b0.471f    DYNAMIC     Fa1/0/11
+ 401    0800.37b1.a4ae    DYNAMIC     Fa1/0/40
+ 401    0800.37b1.b336    DYNAMIC     Fa1/0/36
+ 401    0800.37b1.b347    DYNAMIC     Fa1/0/44
+ 401    0800.37b1.b34a    DYNAMIC     Fa1/0/4
+ 401    4437.e688.cd01    DYNAMIC     Fa1/0/35
+ 401    44ad.d9d5.d4f9    DYNAMIC     Fa1/0/25
+ 401    4ccc.6a1b.0e79    DYNAMIC     Fa1/0/24
+ 401    6c0b.8423.f89c    DYNAMIC     Fa1/0/25
+ 401    70f3.9505.d44b    DYNAMIC     Fa1/0/16
+ 401    90ac.3f00.2388    DYNAMIC     Fa1/0/21
+ 401    90ac.3f00.2937    DYNAMIC     Fa1/0/22
+ 401    bc83.85f7.22a0    DYNAMIC     Fa1/0/15
+ 401    c033.5ec9.c0cf    DYNAMIC     Fa1/0/33
+ 401    c033.5eca.9b6d    DYNAMIC     Fa1/0/2
+ 401    f0de.f17e.d56a    DYNAMIC     Fa1/0/7
+ 401    fc4d.d4d2.18c0    DYNAMIC     Fa1/0/37
+ 501    0021.a087.4387    DYNAMIC     Fa1/0/5
+ 501    0024.c4fd.31d3    DYNAMIC     Fa1/0/2
+ 501    0024.c4fd.3255    DYNAMIC     Fa1/0/34
+ 501    0024.c4fd.32ca    DYNAMIC     Fa1/0/23
+ 501    0024.c4fd.32f9    DYNAMIC     Fa1/0/35
+ 501    0024.c4fd.3376    DYNAMIC     Fa1/0/24
+ 501    0025.4595.5f1f    DYNAMIC     Fa1/0/6
+ 501    0025.4595.60bc    DYNAMIC     Fa1/0/7
+ 501    0025.4595.696a    DYNAMIC     Fa1/0/8
+ 501    0025.4595.6cef    DYNAMIC     Fa1/0/14
+ 501    0025.4595.76d3    DYNAMIC     Fa1/0/18
+ 501    0025.4595.7a5c    DYNAMIC     Fa1/0/39
+ 501    04c5.a4b0.30ea    DYNAMIC     Fa1/0/1
+ 501    04c5.a4b0.3561    DYNAMIC     Fa1/0/28
+ 501    04c5.a4b0.471f    DYNAMIC     Fa1/0/11
+ 501    44ad.d9d5.d4f9    DYNAMIC     Fa1/0/25
+ 399    000e.b64c.f248    DYNAMIC     Fa1/0/32
+ 901    0020.85fd.9b17    DYNAMIC     Fa1/0/47
+ 480    001c.7f22.2296    DYNAMIC     Fa1/0/46
+Total Mac Addresses for this criterion: 80
+busn-01-sw1#Show int | inc (rops|otoc)
+Vlan1 is administratively down, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan399 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan401 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan480 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan501 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan800 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan801 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan901 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan902 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Vlan999 is up, line protocol is down 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/1 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/2 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/3 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/4 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/5 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 50
+     0 unknown protocol drops
+FastEthernet1/0/6 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/7 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/8 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 104
+     0 unknown protocol drops
+FastEthernet1/0/9 is administratively down, line protocol is down (disabled) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/10 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/11 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/12 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/13 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/14 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/15 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/16 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/17 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/18 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/19 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/20 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/21 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/22 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/23 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/24 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/25 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 136
+     0 unknown protocol drops
+FastEthernet1/0/26 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/27 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/28 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/29 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/30 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/31 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/32 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/33 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/34 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/35 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/36 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/37 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/38 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/39 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/40 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/41 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/42 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/43 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/44 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/45 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/46 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/47 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+FastEthernet1/0/48 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 17140
+     0 unknown protocol drops
+GigabitEthernet1/0/1 is up, line protocol is up (connected) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/2 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/3 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+GigabitEthernet1/0/4 is down, line protocol is down (notconnect) 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Loopback1 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+Loopback161 is up, line protocol is up 
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+     0 unknown protocol drops
+busn-01-sw1#Show run
+Building configuration...
+
+Current configuration : 25562 bytes
+!
+! Last configuration change at 16:53:46 WST Thu Dec 14 2017 by n040303
+! NVRAM config last updated at 16:53:49 WST Thu Dec 14 2017 by n040303
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+!
+hostname busn-01-sw1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 64000
+no logging console
+enable secret 4 26Y5WbmBWDgWHIvNLDC6rcFPZFfZmn/Bmjb2/s10MhI
+!
+username westernpower privilege 15 secret 4 26Y5WbmBWDgWHIvNLDC6rcFPZFfZmn/Bmjb2/s10MhI
+aaa new-model
+!
+!
+aaa authentication fail-message ^C
+ ********************************************************************
+ *      The supplied Username and/or Password is not valid.         *
+ *  This failed login attempt has been recorded for audit purposes. *
+ ********************************************************************
+^^C
+aaa authentication login default group radius local
+aaa authentication login console enable
+aaa authorization exec default if-authenticated 
+aaa accounting send stop-record authentication failure
+aaa accounting exec default start-stop group radius
+!
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone WST 8 0
+switch 1 provision ws-c3750v2-48ps
+system mtu routing 1500
+vtp domain busn
+vtp mode transparent
+ip routing
+ip domain-name ads.westernpower.com.au
+!
+!
+!
+ip dhcp snooping vlan 1,401,501
+no ip dhcp snooping information option
+ip dhcp snooping
+ip multicast-routing distributed
+login on-failure log
+login on-success log
+!
+mls qos map cos-dscp 0 8 16 24 32 46 48 56
+mls qos srr-queue input bandwidth 90 10
+mls qos srr-queue input threshold 1 8 16
+mls qos srr-queue input threshold 2 34 66
+mls qos srr-queue input buffers 67 33 
+mls qos srr-queue input cos-map queue 1 threshold 2 1
+mls qos srr-queue input cos-map queue 1 threshold 3 0
+mls qos srr-queue input cos-map queue 2 threshold 1 2
+mls qos srr-queue input cos-map queue 2 threshold 2 4 6 7
+mls qos srr-queue input cos-map queue 2 threshold 3 3 5
+mls qos srr-queue input dscp-map queue 1 threshold 2 9 10 11 12 13 14 15
+mls qos srr-queue input dscp-map queue 1 threshold 3 0 1 2 3 4 5 6 7
+mls qos srr-queue input dscp-map queue 1 threshold 3 32
+mls qos srr-queue input dscp-map queue 2 threshold 1 16 17 18 19 20 21 22 23
+mls qos srr-queue input dscp-map queue 2 threshold 2 33 34 35 36 37 38 39 48
+mls qos srr-queue input dscp-map queue 2 threshold 2 49 50 51 52 53 54 55 56
+mls qos srr-queue input dscp-map queue 2 threshold 2 57 58 59 60 61 62 63
+mls qos srr-queue input dscp-map queue 2 threshold 3 24 25 26 27 28 29 30 31
+mls qos srr-queue input dscp-map queue 2 threshold 3 40 41 42 43 44 45 46 47
+mls qos srr-queue output cos-map queue 1 threshold 3 5
+mls qos srr-queue output cos-map queue 2 threshold 3 3 6 7
+mls qos srr-queue output cos-map queue 3 threshold 3 2 4
+mls qos srr-queue output cos-map queue 4 threshold 2 1
+mls qos srr-queue output cos-map queue 4 threshold 3 0
+mls qos srr-queue output dscp-map queue 1 threshold 3 40 41 42 43 44 45 46 47
+mls qos srr-queue output dscp-map queue 2 threshold 3 24 25 26 27 28 29 30 31
+mls qos srr-queue output dscp-map queue 2 threshold 3 48 49 50 51 52 53 54 55
+mls qos srr-queue output dscp-map queue 2 threshold 3 56 57 58 59 60 61 62 63
+mls qos srr-queue output dscp-map queue 3 threshold 3 16 17 18 19 20 21 22 23
+mls qos srr-queue output dscp-map queue 3 threshold 3 32 33 34 35 36 37 38 39
+mls qos srr-queue output dscp-map queue 4 threshold 1 8
+mls qos srr-queue output dscp-map queue 4 threshold 2 9 10 11 12 13 14 15
+mls qos srr-queue output dscp-map queue 4 threshold 3 0 1 2 3 4 5 6 7
+mls qos queue-set output 1 threshold 1 138 138 92 138
+mls qos queue-set output 1 threshold 2 138 138 92 400
+mls qos queue-set output 1 threshold 3 36 77 100 318
+mls qos queue-set output 1 threshold 4 20 50 67 400
+mls qos queue-set output 2 threshold 1 149 149 100 149
+mls qos queue-set output 2 threshold 2 118 118 100 235
+mls qos queue-set output 2 threshold 3 41 68 100 272
+mls qos queue-set output 2 threshold 4 42 72 100 242
+mls qos queue-set output 1 buffers 10 10 26 54
+mls qos queue-set output 2 buffers 16 6 17 61
+mls qos
+!
+crypto pki trustpoint TP-self-signed-1971253632
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1971253632
+ revocation-check none
+ rsakeypair TP-self-signed-1971253632
+!
+!
+crypto pki certificate chain TP-self-signed-1971253632
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31393731 32353336 3332301E 170D3134 30373136 30393231 
+  33335A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 39373132 
+  35333633 3230819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  8100AA65 E6395B23 F2451940 2622C43F 08CFEEC6 9C494340 A7A971AF 1DD216A9 
+  611B9D66 E000AACE 30140335 EF151CD8 CF29C328 C5BB11C8 BCE0B4D8 D3DF97AB 
+  DA043250 7A46EDCE EEBCEA65 5498C49D 6F5D28F0 1161A901 75DCE75F AF6FBC37 
+  365A069F 1D26FC41 F22BDEA6 0C42936C 50CE5293 16A4F63C A349F518 60B27D30 
+  3C130203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14007AC0 A35929C5 C3146B10 8CC20C5D 0ABAD9D1 74301D06 
+  03551D0E 04160414 007AC0A3 5929C5C3 146B108C C20C5D0A BAD9D174 300D0609 
+  2A864886 F70D0101 05050003 81810077 63E5F725 FE2429B9 F2811151 85CFC9AC 
+  7A7658AB BC75AC27 5A7E31D6 D3BAB64F 26850A96 68C87A4B 25425BDD F793640D 
+  1C3C1680 8F6B184F BC64A050 96C7A80D C9AC9912 14DA0D09 A711245C 7E034290 
+  B37F8C1A 2E7CBEB2 038A75DE 5FFC1B45 63AB7E87 D2BB98A0 9D0C8F17 F3729CB5 
+  D2B6FB42 00E7CA01 A9987BA0 803785
+  	quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree portfast bpduguard default
+spanning-tree portfast bpdufilter default
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 399
+ name STEELHEAD_MANAGEMENT
+!
+vlan 401
+ name USER_DATA_VLAN
+!
+vlan 480
+ name SECURITY
+!
+vlan 501
+ name USER_VOICE_VLAN
+!
+vlan 800
+ name WLAN_AP_Management
+!
+vlan 801
+ name WLAN_Corp_Clients
+!
+vlan 901
+ name ANCILLIARY_MANAGEMENT
+!
+vlan 902
+ name PHYSICAL_SECURITY
+!
+vlan 999
+ name WINTEL_MANAGEMENT
+!
+ip telnet source-interface Loopback1
+ip ssh version 2
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback1
+ description T1 management interface
+ ip address 10.81.240.5 255.255.255.255
+!
+interface Loopback161
+ description *** Anycast RP Address ONLY ***
+ ip address 10.81.240.24 255.255.255.255
+ ip pim sparse-mode
+!
+interface FastEthernet1/0/1
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/2
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/3
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/4
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/5
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/6
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/7
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/8
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/9
+ description "Suspected Faulty Port"
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ shutdown
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/10
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/11
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/12
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/13
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/14
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/15
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/16
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/17
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/18
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/19
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/20
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/21
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/22
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/23
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/24
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/25
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/26
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/27
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/28
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/29
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/30
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/31
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/32
+ description STEELHEAD_MANAGEMENT
+ switchport access vlan 399
+ spanning-tree portfast
+!
+interface FastEthernet1/0/33
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/34
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/35
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/36
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/37
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/38
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/39
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/40
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/41
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/42
+ description CCTV SYSTEM
+ switchport access vlan 902
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface FastEthernet1/0/43
+ description CCTV LAPTOP
+ switchport access vlan 902
+ switchport mode access
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface FastEthernet1/0/44
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/45
+ switchport access vlan 401
+ switchport mode access
+ switchport voice vlan 501
+ no logging event link-status
+ mls qos trust device cisco-phone
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ ip dhcp snooping limit rate 20
+!
+interface FastEthernet1/0/46
+ description CARDAX SECURITY
+ switchport access vlan 480
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet1/0/47
+ description busn-UPS
+ switchport access vlan 901
+ spanning-tree portfast
+!
+interface FastEthernet1/0/48
+ description busn-01-rb1
+ no switchport
+ ip address 10.81.242.2 255.255.255.248
+ ip pim sparse-mode
+ ip summary-address eigrp 81 10.81.0.0 255.255.128.0
+ ip summary-address eigrp 81 10.81.128.0 255.255.128.0
+!
+interface GigabitEthernet1/0/1
+ description busn-02-sw1 gi1/0/1
+ no switchport
+ ip address 10.81.242.25 255.255.255.252
+ ip hello-interval eigrp 81 1
+ ip hold-time eigrp 81 3
+ ip pim sparse-mode
+ srr-queue bandwidth share 10 10 60 20
+ queue-set 2
+ priority-queue out 
+ mls qos trust cos
+ auto qos voip trust 
+!
+interface GigabitEthernet1/0/2
+ ip dhcp snooping limit rate 20
+!
+interface GigabitEthernet1/0/3
+ ip dhcp snooping limit rate 20
+!
+interface GigabitEthernet1/0/4
+ ip dhcp snooping limit rate 20
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan399
+ description STEELHEAD_MANAGEMENT
+ ip address 10.81.241.1 255.255.255.248
+!
+interface Vlan401
+ description T1 data
+ ip address 10.81.64.1 255.255.255.0
+ ip helper-address 10.19.7.43
+ ip helper-address 10.19.0.66
+ ip helper-address 10.21.0.66
+ ip helper-address 10.19.1.18
+ ip directed-broadcast 5
+!
+interface Vlan480
+ description SECURITY
+ ip address 10.81.224.1 255.255.255.0
+!
+interface Vlan501
+ description T1 voice
+ ip address 10.81.128.1 255.255.255.0
+ ip helper-address 10.19.0.66
+ ip helper-address 10.21.0.66
+!
+interface Vlan800
+ description busn-wlan-ap-management
+ ip address 10.81.246.1 255.255.255.224
+ ip helper-address 10.19.0.66
+ ip helper-address 10.21.0.66
+!
+interface Vlan801
+ description busn-wlan-corporate-clients
+ ip address 10.81.96.1 255.255.255.0
+ ip helper-address 10.19.0.66
+ ip helper-address 10.21.0.66
+!
+interface Vlan901
+ description Ancilliary Device Management
+ ip address 10.81.254.1 255.255.255.0
+!
+interface Vlan902
+ description Physical Security VLAN
+ ip address 10.81.200.193 255.255.255.224
+!
+interface Vlan999
+ description Wintel Out-of-Band Management (RIB/iLO)
+ ip address 10.81.24.1 255.255.255.0
+!
+!
+router eigrp 81
+ network 10.81.242.0 0.0.0.255
+ redistribute connected
+!
+no ip http server
+ip http secure-server
+!
+!
+ip pim rp-address 10.81.240.24
+!
+ip access-list standard APIC_EM
+ remark --- APIC-EM Appliance ---
+ permit 10.25.253.10
+ deny   any
+ip access-list standard NSG_TELNET
+ remark Allow Nimsoft
+ permit 10.19.7.62
+ remark Allow GWIP HO
+ permit 10.19.250.1
+ remark Allow Network PC's
+ permit 10.19.60.0 0.0.0.255
+ remark Allow HO Vlan1
+ permit 146.195.135.0 0.0.0.127
+ remark Allow Any NBU router
+ permit 10.250.250.0 0.0.0.255
+ remark Allow any router or switch
+ permit 10.0.240.0 0.255.0.255
+ deny   any log
+ip access-list standard NSG_TELNET_SSH
+ permit 146.195.81.24
+ remark --- Nimsoft/CatTools Server Natted IP ---
+ permit 146.195.81.25
+ remark --- Nimsoft/CatTools Server ---
+ permit 10.19.7.62
+ remark --- HO Jumphost ---
+ permit 172.30.0.10
+ remark --- APIC EM - Controller ---
+ permit 10.25.253.10
+ permit 10.19.12.234
+ remark --- Twister - OLD and NEW IP ---
+ permit 146.195.135.0 0.0.0.127
+ remark --- IT Subnet on Lvl2E ---
+ permit 10.19.60.0 0.0.0.255
+ remark --- SEAL WAN Subnet ---
+ permit 10.250.250.0 0.0.0.255
+ remark --- GWIP HO WAN Subnet ---
+ permit 10.19.250.0 0.0.0.7
+ remark --- Management Loopback subnet ---
+ permit 10.0.240.0 0.255.0.255
+ remark --- Empired Management Subnet ---
+ permit 172.30.160.0 0.0.0.15
+ remark --- Deny Anything Else ---
+ deny   any log
+ip access-list standard RO_SNMP
+ remark --- Solarwinds Syslog Server ---
+ permit 10.19.7.46
+ remark --- Empired Management Subnet ---
+ permit 172.30.160.0 0.0.0.255
+ remark --- IT Subnet on Lvl2E ---
+ permit 10.19.60.0 0.0.0.255
+ deny   any
+ip access-list standard RW_SNMP
+ remark ---allow NNMi---
+ permit 172.30.160.10
+ deny   any
+!
+ip radius source-interface Loopback1 
+logging trap debugging
+logging source-interface Loopback1
+logging host 10.19.7.46
+logging host 172.30.160.10
+logging host 172.30.161.10
+access-list 5 permit 10.19.1.17 log
+access-list 5 remark CSC Zetta - Allow Remote wakeup PC's
+access-list 5 permit 10.19.7.49 log
+access-list 5 permit 10.19.1.138 log
+access-list 5 permit 10.19.1.134 log
+!
+snmp-server community eb6cIzuB RO RO_SNMP
+snmp-server community Sp7ZyvwQ RW RW_SNMP
+snmp-server community fc7cJzuC RO APIC_EM
+snmp-server community gd8cKzuD RW APIC_EM
+snmp-server location 32 Cook Street, Busselton, WA 6280 
+snmp-server contact Network Systems x5444
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps license
+snmp-server enable traps config
+snmp-server enable traps syslog
+snmp-server host 146.195.135.50 eb6cIzuB 
+snmp ifmib ifindex persist
+radius-server host 10.19.1.113
+radius-server host 10.21.0.24
+radius-server key 7 143838580509100A0F2D3212321A161A3A2A78764B5D0C1B070E1E78605856617C102F53361E4D73541C025D6A3E085D16667B33343F1B222948057B0B093D3633
+radius-server load-balance method least-outstanding
+!
+!
+!
+banner exec ^C
+ ********************************************************************
+ * You are now logged into: WP                                      *
+ * All activity is being logged for review by System Administrators *
+ ********************************************************************
+^C
+banner login ^C
+ ********************************************************************
+ * [WARNING]                                                        *
+ *                                                                  *
+ * This system belongs to a private organisation. If you are not    *
+ * authorised to access this system, exit immediately.              *
+ * Unauthorised access to this system is forbidden by company       *
+ * policies, national, and international laws.                      *
+ * Unauthorised users are subject to criminal and civil penalties   *
+ * as well as company initiated disciplinary proceedings.           *
+ * By entry into this system you acknowledge that you are           *
+ * authorised access and the level of privilege you subsequently    *
+ * execute on this system. You further acknowledge that by entry    *
+ * into this system you expect no privacy from monitoring.          *
+ *                                                                  *
+ *        ALL ACCESS TO THIS SYSTEM IS MONITORED AND LOGGED         *
+ *                                                                  *
+ ********************************************************************
+^C
+!
+line con 0
+ exec-timeout 15 0
+ logging synchronous
+ login authentication console
+ transport output telnet
+line vty 0 4
+ access-class NSG_TELNET_SSH in
+ exec-timeout 15 0
+ length 0
+ transport input ssh
+ transport output telnet
+line vty 5 15
+ access-class NSG_TELNET_SSH in
+ exec-timeout 15 0
+ transport input ssh
+ transport output telnet
+!
+ntp server 146.195.128.175
+end
+
+busn-01-sw1#Show ver
+Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M), Version 15.0(2)SE10, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Mon 18-Jul-16 02:11 by prod_rel_team
+
+ROM: Bootstrap program is C3750 boot loader
+BOOTLDR: C3750 Boot Loader (C3750-HBOOT-M) Version 12.2(50r)SE, RELEASE SOFTWARE (fc1)
+
+busn-01-sw1 uptime is 27 weeks, 6 days, 15 hours, 10 minutes
+System returned to ROM by power-on
+System restarted at 20:01:23 WST Fri Jun 9 2017
+System image file is "flash:/c3750-ipservicesk9-mz.150-2.SE10.bin"
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+cisco WS-C3750V2-48PS (PowerPC405) processor (revision R0) with 131072K bytes of memory.
+Processor board ID FDO1615Y27F
+Last reset from power-on
+10 Virtual Ethernet interfaces
+48 FastEthernet interfaces
+4 Gigabit Ethernet interfaces
+The password-recovery mechanism is enabled.
+
+512K bytes of flash-simulated non-volatile configuration memory.
+Base ethernet MAC Address       : A4:18:75:7E:F1:80
+Motherboard assembly number     : 73-11705-13
+Power supply part number        : 341-0266-03
+Motherboard serial number       : FDO16151K6B
+Power supply serial number      : LIT16080NDN
+Model revision number           : R0
+Motherboard revision number     : A0
+Model number                    : WS-C3750V2-48PS-S
+System serial number            : FDO1615Y27F
+Top Assembly Part Number        : 800-31041-06
+Top Assembly Revision Number    : B0
+Version ID                      : V08
+CLEI Code Number                : COMP600ARC
+Hardware Board Revision Number  : 0x03
+
+
+Switch Ports Model              SW Version            SW Image                 
+------ ----- -----              ----------            ----------               
+*    1 52    WS-C3750V2-48PS    15.0(2)SE10           C3750-IPSERVICESK9-M     
+
+
+Configuration register is 0xF
+
+busn-01-sw1#Show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       + - replicated route, % - next hop override
+
+Gateway of last resort is 10.81.242.1 to network 0.0.0.0
+
+D*EX  0.0.0.0/0 [170/2588160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      10.0.0.0/8 is variably subnetted, 151 subnets, 8 masks
+D EX     10.18.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.19.0.0/16 [170/2588160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.19.240.1/32 
+           [170/2588160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.19.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.21.240.1/32 
+           [170/5148160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.21.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.25.243.136/30 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     10.25.252.0/28 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     10.65.0.0/16 [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     10.65.243.136/30 
+           [170/2588160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.65.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.65.252.0/28 
+           [170/2588160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.66.0.0/16 
+           [170/25628160] via 10.81.242.1, 3d23h, FastEthernet1/0/48
+D EX     10.66.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.66.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.66.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.66.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.67.0.0/16 [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.67.240.1/32 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.67.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.68.0.0/16 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.68.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.68.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.69.0.0/16 [170/25628160] via 10.81.242.1, 6w0d, FastEthernet1/0/48
+D EX     10.69.240.1/32 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.69.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.70.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:08:54, FastEthernet1/0/48
+D EX     10.70.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.70.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.70.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.70.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.71.0.0/16 [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.71.240.1/32 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.71.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.72.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:47:54, FastEthernet1/0/48
+D EX     10.72.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.72.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.72.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.72.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.73.0.0/16 [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.73.240.1/32 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.73.250.0/29 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.74.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.75.0.0/16 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.75.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.75.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.76.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:09:38, FastEthernet1/0/48
+D EX     10.76.0.0/17 [170/25628160] via 10.81.242.1, 1w3d, FastEthernet1/0/48
+D EX     10.76.128.0/17 
+           [170/25628160] via 10.81.242.1, 1w3d, FastEthernet1/0/48
+D EX     10.76.240.1/32 
+           [170/25628160] via 10.81.242.1, 4w5d, FastEthernet1/0/48
+D EX     10.76.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.77.0.0/16 
+           [170/25628160] via 10.81.242.1, 01:15:35, FastEthernet1/0/48
+D EX     10.77.0.0/17 [170/25628160] via 10.81.242.1, 5w1d, FastEthernet1/0/48
+D EX     10.77.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w1d, FastEthernet1/0/48
+D EX     10.77.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w1d, FastEthernet1/0/48
+D EX     10.78.0.0/16 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.78.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.78.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.79.0.0/16 [170/25628160] via 10.81.242.1, 1w2d, FastEthernet1/0/48
+D EX     10.79.240.1/32 
+           [170/25628160] via 10.81.242.1, 2w1d, FastEthernet1/0/48
+D EX     10.79.250.0/30 
+           [170/25628160] via 10.81.242.1, 2w1d, FastEthernet1/0/48
+D EX     10.80.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:18:29, FastEthernet1/0/48
+D EX     10.80.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.80.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.80.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.80.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.81.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:48:19, FastEthernet1/0/48
+D        10.81.0.0/17 is a summary, 7w0d, Null0
+C        10.81.64.0/24 is directly connected, Vlan401
+L        10.81.64.1/32 is directly connected, Vlan401
+D EX     10.81.66.0/24 [170/3072] via 10.81.242.26, 6w0d, GigabitEthernet1/0/1
+D        10.81.128.0/17 is a summary, 7w0d, Null0
+C        10.81.128.0/24 is directly connected, Vlan501
+L        10.81.128.1/32 is directly connected, Vlan501
+D EX     10.81.130.0/24 
+           [170/3072] via 10.81.242.26, 6w0d, GigabitEthernet1/0/1
+C        10.81.224.0/24 is directly connected, Vlan480
+L        10.81.224.1/32 is directly connected, Vlan480
+D        10.81.240.1/32 [90/156160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+C        10.81.240.5/32 is directly connected, Loopback1
+D EX     10.81.240.10/32 
+           [170/130816] via 10.81.242.26, 6w0d, GigabitEthernet1/0/1
+C        10.81.240.24/32 is directly connected, Loopback161
+C        10.81.241.0/29 is directly connected, Vlan399
+L        10.81.241.1/32 is directly connected, Vlan399
+C        10.81.242.0/29 is directly connected, FastEthernet1/0/48
+L        10.81.242.2/32 is directly connected, FastEthernet1/0/48
+C        10.81.242.24/30 is directly connected, GigabitEthernet1/0/1
+L        10.81.242.25/32 is directly connected, GigabitEthernet1/0/1
+D        10.81.250.0/30 [90/645120] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+C        10.81.254.0/24 is directly connected, Vlan901
+L        10.81.254.1/32 is directly connected, Vlan901
+D EX     10.84.0.0/16 
+           [170/25628160] via 10.81.242.1, 1d14h, FastEthernet1/0/48
+D EX     10.84.0.0/17 
+           [170/25628160] via 10.81.242.1, 1d14h, FastEthernet1/0/48
+D EX     10.84.128.0/17 
+           [170/25628160] via 10.81.242.1, 1d14h, FastEthernet1/0/48
+D EX     10.84.240.1/32 
+           [170/25628160] via 10.81.242.1, 1d14h, FastEthernet1/0/48
+D EX     10.84.250.0/30 
+           [170/25628160] via 10.81.242.1, 3w1d, FastEthernet1/0/48
+D EX     10.85.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:16:04, FastEthernet1/0/48
+D EX     10.85.0.0/17 [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.85.128.0/17 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.85.240.1/32 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.85.250.0/30 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.86.0.0/16 [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.86.64.16/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.86.64.20/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.86.65.16/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.86.65.20/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.86.240.1/32 
+           [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+D EX     10.87.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:21:59, FastEthernet1/0/48
+D EX     10.87.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.87.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.87.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.87.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.88.0.0/16 
+           [170/25628160] via 10.81.242.1, 21:15:41, FastEthernet1/0/48
+D EX     10.88.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.88.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.88.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.88.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.89.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:19:04, FastEthernet1/0/48
+D EX     10.89.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.89.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.89.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.89.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.90.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:17:44, FastEthernet1/0/48
+D EX     10.90.0.0/17 [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.90.128.0/17 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.90.240.1/32 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.90.250.0/30 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.91.0.0/16 [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.91.240.1/32 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.91.250.0/30 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     10.92.0.0/17 [170/25628160] via 10.81.242.1, 1w3d, FastEthernet1/0/48
+D EX     10.92.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.92.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.92.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.93.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.93.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.93.240.1/32 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.93.250.0/30 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.97.0.0/16 [170/25628160] via 10.81.242.1, 2w4d, FastEthernet1/0/48
+D EX     10.97.250.0/29 
+           [170/25628160] via 10.81.242.1, 2w4d, FastEthernet1/0/48
+D EX     10.98.0.0/16 
+           [170/25628160] via 10.81.242.1, 00:47:40, FastEthernet1/0/48
+D EX     10.98.0.0/17 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.98.128.0/17 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.98.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.107.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.110.0.0/16 
+           [170/25628160] via 10.81.242.1, 3w4d, FastEthernet1/0/48
+D EX     10.110.240.1/32 
+           [170/25628160] via 10.81.242.1, 3w4d, FastEthernet1/0/48
+D EX     10.110.250.0/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.248.250.0/25 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D        10.248.250.20/32 
+           [90/565760] via 10.81.242.1, 00:18:02, FastEthernet1/0/48
+D EX     10.248.250.128/25 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     10.252.252.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      30.0.0.0/29 is subnetted, 1 subnets
+D EX     30.20.57.120 [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      144.140.0.0/16 is variably subnetted, 14 subnets, 3 masks
+D EX     144.140.162.40/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.162.48/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.162.80/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.181.80/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.201.1/32 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     144.140.201.2/32 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     144.140.201.3/32 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     144.140.201.16/28 
+           [170/25628160] via 10.81.242.1, 2w3d, FastEthernet1/0/48
+D EX     144.140.208.16/29 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.208.32/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.208.80/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.218.96/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.222.32/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     144.140.224.32/28 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      146.195.0.0/16 is variably subnetted, 6 subnets, 4 masks
+D EX     146.195.21.0/29 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     146.195.30.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     146.195.31.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     146.195.39.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     146.195.180.0/22 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     146.195.255.20/32 
+           [170/2588160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      172.16.0.0/24 is subnetted, 1 subnets
+D EX     172.16.65.0 [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      172.17.0.0/24 is subnetted, 1 subnets
+D EX     172.17.65.0 [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      172.24.0.0/16 is variably subnetted, 6 subnets, 3 masks
+D EX     172.24.96.0/21 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     172.24.108.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     172.24.109.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     172.24.112.0/22 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     172.24.120.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     172.24.192.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      172.25.0.0/16 is variably subnetted, 2 subnets, 2 masks
+D EX     172.25.104.0/24 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+D EX     172.25.105.0/26 
+           [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      172.27.0.0/26 is subnetted, 1 subnets
+D EX     172.27.0.0 [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      172.28.0.0/26 is subnetted, 1 subnets
+D EX     172.28.8.64 [170/25628160] via 10.81.242.1, 2w5d, FastEthernet1/0/48
+      172.29.0.0/24 is subnetted, 1 subnets
+D EX     172.29.1.0 [170/25628160] via 10.81.242.1, 6w0d, FastEthernet1/0/48
+      203.41.188.0/28 is subnetted, 1 subnets
+D EX     203.41.188.96 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      203.42.70.0/28 is subnetted, 1 subnets
+D EX     203.42.70.224 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      203.52.0.0/24 is variably subnetted, 2 subnets, 2 masks
+D EX     203.52.0.0/24 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     203.52.0.192/27 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      203.52.1.0/24 is variably subnetted, 2 subnets, 2 masks
+D EX     203.52.1.0/24 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+D EX     203.52.1.192/27 
+           [170/25628160] via 10.81.242.1, 5w3d, FastEthernet1/0/48
+      203.52.2.0/28 is subnetted, 1 subnets
+D EX     203.52.2.160 [170/25628160] via 10.81.242.1, 7w0d, FastEthernet1/0/48
+busn-01-sw1#Show inv
+NAME: "1", DESCR: "WS-C3750V2-48PS"
+PID: WS-C3750V2-48PS-S , VID: V08  , SN: FDO1615Y27F
+
+NAME: "GigabitEthernet1/0/1", DESCR: "1000BaseSX SFP"
+PID: Unspecified       , VID:      , SN: FNS1009QNKJ     
+
+
+busn-01-sw1#exit

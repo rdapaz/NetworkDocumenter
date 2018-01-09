@@ -29,7 +29,7 @@ class Excel:
             if n==0:
                 m = m-1
                 n = 26
-            retVal = f'{value_colName(m)}{value_colName(n)}' 
+            retVal = '{}{}'.format(column_name(m), column_name(n))
         return retVal
 
     def generate_sheets(self, hostname, data):
