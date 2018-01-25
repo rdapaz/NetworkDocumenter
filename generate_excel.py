@@ -63,9 +63,9 @@ class Excel:
             self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Value2 = val
             self.sh.Range('{}{}'.format(self.column_name(col + 1), 1)).Style = 'Accent3'
         
-        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).Value2 = data
-        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).Style = 'Output'
-        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data))).EntireColumn.AutoFit()
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data)+1)).Value2 = data
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data)+1)).Style = 'Output'
+        self.sh.Range('A2:{}{}'.format(columnNames[-1], len(data)+1)).EntireColumn.AutoFit()
 
         if self.firstSheet:
             self.firstSheet = False
